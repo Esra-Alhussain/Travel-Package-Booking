@@ -1,7 +1,8 @@
 import React from 'react'
 
-export default function filter() {
+export default function Filter(Packages,setPackages) {
+    console.log(Packages)
   return (
-    <div>filter</div>
+    <div>this is filter{Packages.Price}</div>
   )
 }
