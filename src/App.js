@@ -1,6 +1,8 @@
 
 import './App.css';
 import { useState, useEffect  } from 'react';
+import PackageBrowsing from './Components/PackageBrowsing';
+
 
 
 function App() {
@@ -13,10 +15,9 @@ function App() {
   console.log(Packages);
   return (
     <div>
+      
+      <PackageBrowsing packages={Packages} />
     
-    hello please write your compenent here to test how it looks then 
-    delete it when you sure that it is working.. we will put there the nav bar 
-    and the routes for the pages..
     </div>
   );
 }
