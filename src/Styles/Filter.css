@@ -1,0 +1,29 @@
+.filter-container {
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+label {
+    font-weight: bold;
+}
+  
+input[type="text"],
+input[type="number"],
+select {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+
+
+  

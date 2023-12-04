@@ -1,53 +1,62 @@
-import React from 'react'
+import React from 'react';
 import '../Styles/Filter.css'
 
-function Filter({ applyFilters }) {
-  const handleFilterClick = (filterType, value) => {
-    
-    const filters = { [filterType]: value };
-    applyFilters(filters);
-
-  };
-
-
+const Filter = ({ onFilterChange }) => {
   return (
-    
-    <div className='filter'>
+    <div className='filter-container'>
       <div className='destinations'>
-        <p>Top Destinations</p>
-        <button onClick={() => handleFilterClick('destination', 'Paris')} className='btns'>Paris</button>
-        <button onClick={() => handleFilterClick('destination', 'Tokyo')} className='btns'>Tokyo</button>
-        <button onClick={() => handleFilterClick('destination', 'New York')} className='btns'>New York</button>
-        <button onClick={() => handleFilterClick('destination', 'Rome')} className='btns'>Rome</button>
-        <button onClick={() => handleFilterClick('destination', 'Barcelona')} className='btns'>Barcelona</button>
-      </div>
-
-      {/* <div className='durations'>
-        <p>Durations</p>
-        <button className='btns'>1-2</button>
-        <button className='btns'>3-4</button>
-        <button className='btns'>5-6</button>
-        <button className='btns'>7-8</button>
-        <button className='btns'>Above 8</button>
-      </div>
-
+        <label>Filter by Destination:
+          <input type="text" name="destination" onChange={(e) => onFilterChange('destination', e.target.value)} />
+        </label>
+        </div>
+      
+      <div className='durations'>
+        <label>Filter by Duration:
+          <input type="text" name="duration" onChange={(e) => onFilterChange('duration', e.target.value)} />
+        </label>
+        </div>
+      
       <div className='ratings'>
-        <p>Ratings</p>
-        <button className='btns'>Superb: 4.5+</button>
-        <button className='btns'>Good: 3.5+</button>
-        <button className='btns'>Pleasant: 3+</button>
+        <label>Filter by Rating:</label>
+        <select name="rating" onChange={(e) => onFilterChange('rating', e.target.value)}>
+          <option value="">All Ratings</option>
+          <option value="5">Above 4.5</option>
+          <option value="4.5">3.5 - 4.5</option>
+          <option value="3.5">2.5 - 3.5</option>
+          <option value="2.5">Below 2.5</option> 
+        </select>
       </div>
-
+      
       <div className='priceRange'>
-        <p>Price</p>
-        <button className='btns'>Below $1000</button>
-        <button className='btns'>$1000 - $2000</button>
-        <button className='btns'>$2000 - $3000</button>
-        <button className='btns'>Above $3000</button>
-      </div> */}
+        <label>Filter by Price Range:
+        <div className="radio-group">
+          <label> 
+            <input type="radio" name="priceRange" value="all" onChange={() => onFilterChange('minPrice', '', 'maxPrice', '')} />
+            All
+          </label>
+          <label>
+            <input type="radio" name="priceRange" value="below 1000" onChange={() => onFilterChange('minPrice', '0', 'maxPrice', '999')} />
+            Below $1000
+          </label>
+          <label>
+            <input type="radio" name="priceRange" value="1000-1999" onChange={() => onFilterChange('minPrice', '1000', 'maxPrice', '1999')} />
+            $1000 - $1999
+          </label>
+          <label>
+            <input type="radio" name="priceRange" value="2000-3000" onChange={() => onFilterChange('minPrice', '2000', 'maxPrice', '2999')} />
+            $2000 - $2999
+          </label>
+          <label>
+            <input type="radio" name="priceRange" value="above 3000" onChange={() => onFilterChange('minPrice', '3000', 'maxPrice', '')} />
+            Above $3000
+          </label>
+          
+        </div>
+        </label>
+      </div>
+      
     </div>
-  
-  )
-}
+  );
+};
 
 export default Filter;
