@@ -58,9 +58,9 @@ function PackageBrowsing({ packages }) {
       <Filter onFilterChange={handleFilterChange} />
 
       <h2>Available Travel Packages</h2>
-
+      <div className='package-grid'>
       {filteredPackages.length === 0 ? (
-        <p>Based on your filters, nothing is available.</p> 
+        <p className='package-null'>Based on your filters, nothing is available.</p> 
         ) : (
           
           filteredPackages.map((packageItem) => (
@@ -80,6 +80,9 @@ function PackageBrowsing({ packages }) {
           </div>
         ))
       )}
+      </div>
+
+      
     </div>
   );
 };
