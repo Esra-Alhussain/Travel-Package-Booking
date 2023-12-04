@@ -9,18 +9,19 @@ function PackageBrowsing({ packages }) {
     setFilteredPackages(packages);
   }, [packages]);
 
-  const applyFilters = (filters) => {
+  function applyFilters(filters) {
+    console.log('Filters:', filters);
     let filtered = packages;
-
+  
     if (filters.destination) {
-      filtered = packages.filter(
-        (packageItem) => packageItem.itinerary.destination === filters.destination
+      filtered = packages.filter((packageItem) => 
+        packageItem.itinerary.destination === filters.destination
       );
     }
-
-    console.log(filtered)
+  
+    console.log(filtered);
     setFilteredPackages(filtered);
-  };
+  }
 
   return (
     <div>

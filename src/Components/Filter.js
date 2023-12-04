@@ -1,9 +1,12 @@
 import React from 'react'
 import '../Styles/Filter.css'
 
-export default function Filter({ applyFilters }) {
+function Filter({ applyFilters }) {
   const handleFilterClick = (filterType, value) => {
-    applyFilters({ [filterType]: value });
+    
+    const filters = { [filterType]: value };
+    applyFilters(filters);
+
   };
 
 
@@ -19,7 +22,7 @@ export default function Filter({ applyFilters }) {
         <button onClick={() => handleFilterClick('destination', 'Barcelona')} className='btns'>Barcelona</button>
       </div>
 
-      <div className='durations'>
+      {/* <div className='durations'>
         <p>Durations</p>
         <button className='btns'>1-2</button>
         <button className='btns'>3-4</button>
@@ -41,8 +44,10 @@ export default function Filter({ applyFilters }) {
         <button className='btns'>$1000 - $2000</button>
         <button className='btns'>$2000 - $3000</button>
         <button className='btns'>Above $3000</button>
-      </div>
+      </div> */}
     </div>
   
   )
 }
+
+export default Filter;
