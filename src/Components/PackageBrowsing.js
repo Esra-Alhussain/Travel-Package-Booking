@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Filter from './Filter';
 import '../Styles/PackageBrowsing.css'
+import { IoIosStar } from "react-icons/io";
 
 function PackageBrowsing({ packages }) {
   const [filter, setFilter] = useState({
@@ -61,15 +62,20 @@ function PackageBrowsing({ packages }) {
       {filteredPackages.length === 0 ? (
         <p>Based on your filters, nothing is available.</p> 
         ) : (
+          
           filteredPackages.map((packageItem) => (
-          <div key={packageItem.id} className="package-container">
+          <div key={packageItem.id} className='package-container'>
             <img src={packageItem.pic} alt={packageItem.itinerary.destination} className="package-image" />
-            <h3 className="package-title">{packageItem.itinerary.destination}</h3>
-            <p className="package-details">Duration: {packageItem.itinerary.duration} days</p>
-            <p className="package-details">Price: ${packageItem.price}</p>
-            <p className="package-details">Accommodation: {packageItem.itinerary.accommodation}</p>
-            <p className="package-rating">Overall Rating: {packageItem['overall-rating']}</p>
-            <p className="package-tickets">Tickets Available: {packageItem.tickets}</p>
+            
+            <div className='package-details-header'>
+              <h4 className='package-title'>{packageItem.itinerary.destination}</h4>
+              <h4 className='package-rating'><IoIosStar /> {packageItem['overall-rating']}</h4>
+            </div>
+
+            <p className='package-details'>Duration: {packageItem.itinerary.duration} days</p>
+            <p className='package-details'>Accommodation: {packageItem.itinerary.accommodation}</p>
+            <p className='package-details'>Tickets Available: {packageItem.tickets}</p>
+            <p className='package-price'>${packageItem.price} CAD</p>
             
           </div>
         ))
