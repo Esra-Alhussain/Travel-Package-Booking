@@ -9,11 +9,21 @@ function PackageBrowsing({ packages }) {
     rating: '',
     minPrice: '',
     maxPrice: '',
+    priceRange: {
+      minPrice: '',
+      maxPrice: '',
+    },
   });
 
   const handleFilterChange = (name, value) => {
     setFilter({ ...filter, [name]: value });
   };
+  // const handleFilterChange = (name, { minPrice, maxPrice }) => {
+  //   setFilter({
+  //     ...filter,
+  //     [name]: { minPrice, maxPrice },
+  //   });
+  // };
 
   const filteredPackages = packages.filter((packageItem) => {
 
@@ -28,10 +38,15 @@ function PackageBrowsing({ packages }) {
       (filter.rating === "2.5" && packageItem['overall-rating'] < 2.5)
     );
 
+    // const priceMatch =
+    //   (!filter.minPrice || packageItem.price >= parseInt(filter.minPrice)) &&
+    //   (!filter.maxPrice || packageItem.price < parseInt(filter.maxPrice));
+
     const priceMatch =
-      (!filter.minPrice || packageItem.price >= parseInt(filter.minPrice)) &&
-      (!filter.maxPrice || packageItem.price < parseInt(filter.maxPrice));
+      (!filter.priceRange.minPrice || packageItem.price >= parseInt(filter.priceRange.minPrice)) &&
+      (!filter.priceRange.maxPrice || packageItem.price < parseInt(filter.priceRange.maxPrice));
     
+      console.log('min:', filter.minPrice, 'max:',filter.maxPrice)
       console.log(priceMatch);
 
     return destinationMatch && durationMatch && ratingMatch && priceMatch;

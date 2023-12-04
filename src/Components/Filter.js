@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/Filter.css'
 
-const Filter = ({ onFilterChange }) => {
+function Filter({ onFilterChange }) {
   return (
     <div className='filter-container'>
       <div className='destinations'>
@@ -31,23 +31,23 @@ const Filter = ({ onFilterChange }) => {
         <label>Filter by Price Range:
         <div className="radio-group">
           <label> 
-            <input type="radio" name="priceRange" value="all" onChange={() => onFilterChange('minPrice', '', 'maxPrice', '')} />
+            <input type="radio" name="priceRange" value="all" onChange={() => onFilterChange('priceRange', { minPrice: '', maxPrice: '' })} />
             All
           </label>
           <label>
-            <input type="radio" name="priceRange" value="below 1000" onChange={() => onFilterChange('minPrice', '0', 'maxPrice', '999')} />
+            <input type="radio" name="priceRange" value="below 1000" onChange={() => onFilterChange('priceRange', { minPrice: '0', maxPrice: '999' })} />
             Below $1000
           </label>
           <label>
-            <input type="radio" name="priceRange" value="1000-1999" onChange={() => onFilterChange('minPrice', '1000', 'maxPrice', '1999')} />
+            <input type="radio" name="priceRange" value="1000-1999" onChange={() => onFilterChange('priceRange', { minPrice: '1000', maxPrice: '1999' })} />
             $1000 - $1999
           </label>
           <label>
-            <input type="radio" name="priceRange" value="2000-3000" onChange={() => onFilterChange('minPrice', '2000', 'maxPrice', '2999')} />
+            <input type="radio" name="priceRange" value="2000-3000" onChange={() => onFilterChange('priceRange', { minPrice: '2000', maxPrice: '2999' })} />
             $2000 - $2999
           </label>
           <label>
-            <input type="radio" name="priceRange" value="above 3000" onChange={() => onFilterChange('minPrice', '3000', 'maxPrice', '')} />
+            <input type="radio" name="priceRange" value="above 3000" onChange={() => onFilterChange('priceRange', { minPrice: '3000', maxPrice: '0' })} />
             Above $3000
           </label>
           
