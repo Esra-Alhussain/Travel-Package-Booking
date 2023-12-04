@@ -69,6 +69,8 @@ function PackageBrowsing({ packages }) {
             <p className="package-details">Price: ${packageItem.price}</p>
             <p className="package-details">Accommodation: {packageItem.itinerary.accommodation}</p>
             <p className="package-rating">Overall Rating: {packageItem['overall-rating']}</p>
+            <p className="package-tickets">Tickets Available: {packageItem.tickets}</p>
+            
           </div>
         ))
       )}
