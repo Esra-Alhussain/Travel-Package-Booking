@@ -73,7 +73,7 @@ function PackageBrowsing({ packages }) {
             </div>
 
             <p className='package-details'>Duration: {packageItem.itinerary.duration} days</p>
-            <p className='package-details'>Accommodation: {packageItem.itinerary.accommodation}</p>
+            {/* <p className='package-details'>Accommodation: {packageItem.itinerary.accommodation}</p> */}
             <p className='package-details'>Tickets Available: {packageItem.tickets}</p>
             <p className='package-price'>${packageItem.price} CAD</p>
             
