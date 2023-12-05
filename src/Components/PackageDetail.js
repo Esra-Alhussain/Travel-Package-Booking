@@ -14,9 +14,9 @@ import React, { useState, useEffect } from 'react';
 //<PackageDetails packageData={examplePackage} />
 
 const PackageDetail = ({packageId}) => {
-    // State to store the package data
+    // State to  stores the details of the selected travel package
   const [packageData, setpackageData] = useState(null);
-    // State to handle loading state
+    // State to indicates whether the data is still being fetched 
   const [loading, setLoading] = useState(true);
 
   //useEffect takes 2 arguments , 1- The function contains the code i want to run as a side effect.
