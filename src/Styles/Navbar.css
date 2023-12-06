@@ -1,0 +1,16 @@
+.Navbar{
+    background-color: #065d90;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: aliceblue;
+    padding: 2rem;
+    font-family: "Playfair Display", serif;
+    font-family: "Roboto", sans-serif;
+}
+.leftside{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+width: 50%;
+}

@@ -5,6 +5,7 @@ import { useState, useEffect  } from 'react';
 import TravelPackageCreation from './Components/TravelPackageCreation';
 
 import PackageBrowsing from './Components/PackageBrowsing';
+import Navbar from './Components/Navbar';
 
 
 
@@ -19,6 +20,7 @@ function App() {
   console.log(Packages);
   return (
     <div>
+      <Navbar/>
 
     <TravelPackageCreation setPackages={setPackages} Packages={Packages}/>
     {/* hello please write your compenent here to test how it looks then 
