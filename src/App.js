@@ -1,7 +1,8 @@
 
 import './App.css';
 import { useState, useEffect  } from 'react';
-import PackageBrowsing from './Components/PackageBrowsing';
+import AllPackages from './pages/AllPackages'
+
 
 
 
@@ -16,7 +17,7 @@ function App() {
   return (
     <div>
       
-      <PackageBrowsing packages={Packages} />
+      <AllPackages packages={Packages} />
     
     </div>
   );

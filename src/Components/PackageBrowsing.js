@@ -1,31 +1,9 @@
-import React, { useState } from 'react';
-import Filter from './Filter';
+import React from 'react';
 import '../Styles/PackageBrowsing.css'
 import { IoIosStar } from "react-icons/io";
 
-function PackageBrowsing({ packages }) {
-  const [filter, setFilter] = useState({
-    destination: '',
-    duration: '',
-    rating: '',
-    minPrice: '',
-    maxPrice: '',
-    priceRange: {
-      minPrice: '',
-      maxPrice: '',
-    },
-  });
-
-  const handleFilterChange = (name, value) => {
-    setFilter({ ...filter, [name]: value });
-  };
-  // const handleFilterChange = (name, { minPrice, maxPrice }) => {
-  //   setFilter({
-  //     ...filter,
-  //     [name]: { minPrice, maxPrice },
-  //   });
-  // };
-
+function PackageBrowsing({ packages,filter }) {
+  
   const filteredPackages = packages.filter((packageItem) => {
 
     const destinationMatch = packageItem.itinerary.destination.toLowerCase().includes(filter.destination.toLowerCase());
@@ -39,10 +17,6 @@ function PackageBrowsing({ packages }) {
       (filter.rating === "2.5" && packageItem['overall-rating'] < 2.5)
     );
 
-    // const priceMatch =
-    //   (!filter.minPrice || packageItem.price >= parseInt(filter.minPrice)) &&
-    //   (!filter.maxPrice || packageItem.price < parseInt(filter.maxPrice));
-
     const priceMatch =
       (!filter.priceRange.minPrice || packageItem.price >= parseInt(filter.priceRange.minPrice)) &&
       (!filter.priceRange.maxPrice || packageItem.price < parseInt(filter.priceRange.maxPrice));
@@ -55,8 +29,6 @@ function PackageBrowsing({ packages }) {
 
   return (
     <div>
-      <Filter onFilterChange={handleFilterChange} />
-
       <h2>Available Travel Packages</h2>
       <div className='package-grid'>
       {filteredPackages.length === 0 ? (
