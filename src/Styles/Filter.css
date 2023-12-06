@@ -13,11 +13,12 @@
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
   }
 
-label {
+.filter-container label {
     display: flex;
     font-size: 16px;
     font-weight: 500;
     align-items: center;
+    color:black;
 }
 
 .ratings {
@@ -26,9 +27,9 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"],
-input[type="number"],
-select {
+.filter-container input[type="text"],
+.filter-container input[type="number"],
+.filter-container select {
     display: flex;
     width: 200px;
     padding: 10px;
@@ -40,13 +41,13 @@ select {
     font-size: 14px;
 }
 
-input[type="radio"] {
+.filter-container input[type="radio"] {
     margin-right: 5px;
     margin-left: 15px;
     cursor: pointer;
 }
 
-input[type="radio"]:checked + span {
+.filter-container input[type="radio"]:checked + span {
     font-weight: bold;
 }
 
