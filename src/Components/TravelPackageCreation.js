@@ -93,7 +93,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
       <div className="form">
         <form onSubmit={handleAddPackage}>
           {/* Itinerary Section */}
-          <label htmlFor="destination">Destination</label>
+          <label class='labelTravelCreation' htmlFor="destination">Destination</label>
           <input
             type="text"
             id="destination"
@@ -104,7 +104,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
             required
           />
 
-          <label htmlFor="duration">Duration</label>
+          <label class='labelTravelCreation' htmlFor="duration">Duration</label>
           <input
             type="number"
             min="0"
@@ -116,7 +116,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
             required
           />
 
-          <label htmlFor="seasons">Season</label>
+          <label class='labelTravelCreation' htmlFor="seasons">Season</label>
           <select
             id="seasons"
             name="season"
@@ -130,7 +130,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
             <option value="Autumn">Autumn</option>
           </select>
 
-          <label htmlFor="accommodation">Accommodation</label>
+          <label class='labelTravelCreation' htmlFor="accommodation">Accommodation</label>
           <input
             type="text"
             id="accommodation"
@@ -142,7 +142,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
           />
 
           {/* Tickets Section */}
-          <label htmlFor="tickets">Tickets</label>
+          <label class='labelTravelCreation' htmlFor="tickets">Tickets</label>
           <input
             type="number"
             min="0"
@@ -155,7 +155,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
           />
 
           {/* Price Section */}
-          <label htmlFor="price">Price</label>
+          <label class='labelTravelCreation' htmlFor="price">Price</label>
           <input
             type="number"
             min="0"
@@ -168,7 +168,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
           />
 
           {/* Picture Section */}
-          <label htmlFor="pic">Picture</label>
+          <label class='labelTravelCreation' htmlFor="pic">Picture</label>
           <input
             type="url"
             id="pic"
@@ -179,7 +179,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
             required
           />
           {/* description Section */}
-          <label htmlFor="description">Description</label>
+          <label class='labelTravelCreation' htmlFor="description">Description</label>
           <textarea id="description" 
           name="description" 
           rows="4" 
