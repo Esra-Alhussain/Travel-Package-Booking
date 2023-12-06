@@ -6,11 +6,11 @@
   font-family: "Roboto", sans-serif;
 }
 
-h1 {
+.container h1 {
   color: #065d90;
   margin-left: 1rem;
 }
-h1 span {
+.container h1 span {
   border-bottom: 2px solid #065d90;
   padding-bottom: 2px;
   display: inline;
@@ -20,7 +20,7 @@ h1 span {
   display: flex;
   justify-content: center;
 }
-form {
+.container form {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -28,8 +28,8 @@ form {
   background-color: #d0e5f1;
 }
 
-form input,
-form select  {
+.container form input,
+.container form select  {
   height: 2rem;
   margin-bottom: 0.5rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -37,14 +37,14 @@ form select  {
   border-radius: 5px;
 }
 
-textarea{
+.container textarea{
     margin-bottom: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 5px;
 }
 
-form button {
+.container form button {
   align-self: center;
   width: 40%;
   height: 2.5rem;
@@ -58,7 +58,7 @@ form button {
   border-radius: 3px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-label {
+.labelTravelCreation {
   color: #065d90;
   font-weight: bold;
   margin-bottom: 0.3rem;
@@ -71,10 +71,10 @@ label {
 }
 
 @media screen and (max-width: 800px) {
-  form {
+.container form {
     width: 90%;
   }
-  h1 {
+.container h1 {
     font-size: large;
     margin-bottom: 2rem;
   }
