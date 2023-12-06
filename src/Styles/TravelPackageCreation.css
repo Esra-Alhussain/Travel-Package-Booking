@@ -1,72 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Roboto:wght@100&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Roboto:wght@100&display=swap");
 
-.container{
-background-color: #D0E5F1;
-font-family: 'Playfair Display', serif;
-font-family: 'Roboto', sans-serif;
+.container {
+  background-color: #d0e5f1;
+  font-family: "Playfair Display", serif;
+  font-family: "Roboto", sans-serif;
 }
 
-h1{
-    color: #065D90;
-    margin-left: 1rem;
+h1 {
+  color: #065d90;
+  margin-left: 1rem;
 }
-h1 span{
-    
-    border-bottom: 2px solid #065D90; 
-  padding-bottom: 2px; 
+h1 span {
+  border-bottom: 2px solid #065d90;
+  padding-bottom: 2px;
   display: inline;
-    
 }
 
-.form{
-    display: flex;
-    justify-content: center;
-   
+.form {
+  display: flex;
+  justify-content: center;
 }
-form{
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    width: 40%;
-    background-color: #D0E5F1;
-    /* justify-content: center; */
-    /* flex-direction: column; */
-    /* text-align: start; */
-    /* align-items: center; */
-    
+form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 40%;
+  background-color: #d0e5f1;
 }
 
-form input , form select {
-    /* width: 40%; */
-    height: 2rem;
+form input,
+form select  {
+  height: 2rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  border-radius: 5px;
+}
+
+textarea{
     margin-bottom: 0.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border: none;
     border-radius: 5px;
 }
 
-form button{
-    align-self: center;
-    width: 40%;
-    height: 2.5rem;
-    border: none;
-    background-color: #065D90;
-    color:white;
-    margin: 2rem;
-    cursor: pointer;
-    font-size: larger;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+form button {
+  align-self: center;
+  width: 40%;
+  height: 2.5rem;
+  border: none;
+  background-color: #065d90;
+  color: white;
+  margin: 2rem;
+  cursor: pointer;
+  font-size: larger;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-label{
-    color:#065D90;
-    font-weight: bold;
-    margin-bottom: 0.3rem;
+label {
+  color: #065d90;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+::placeholder{
+    opacity: 0.5;
+    font-family:Arial, Helvetica, sans-serif !important;
+    padding: 0.5rem;
+    
 }
 
 @media screen and (max-width: 800px) {
-    form input , form select , form button{
-        width: 100%;
-    }
+  form {
+    width: 90%;
   }
+  h1 {
+    font-size: large;
+    margin-bottom: 2rem;
+  }
+}
