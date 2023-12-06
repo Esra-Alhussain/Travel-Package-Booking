@@ -6,7 +6,7 @@ import TravelPackageCreation from './Components/TravelPackageCreation';
 
 import PackageBrowsing from './Components/PackageBrowsing';
 import Navbar from './Components/Navbar';
-
+import HeroSection from './Components/HeroSection';
 
 
 
@@ -21,6 +21,7 @@ function App() {
   return (
     <div>
       <Navbar/>
+      <HeroSection/>
 
     <TravelPackageCreation setPackages={setPackages} Packages={Packages}/>
     {/* hello please write your compenent here to test how it looks then 
