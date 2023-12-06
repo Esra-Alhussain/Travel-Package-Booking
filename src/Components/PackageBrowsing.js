@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Styles/PackageBrowsing.css'
 import { IoIosStar } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 function PackageBrowsing({ packages,filter }) {
   
@@ -34,8 +35,9 @@ function PackageBrowsing({ packages,filter }) {
       {filteredPackages.length === 0 ? (
         <p className='package-null'>Based on your filters, nothing is available.</p> 
         ) : (
-          
           filteredPackages.map((packageItem) => (
+            // <link key={packageItem.id} to={`/AllPackage/${packageItem.id}`} className='package-container'>
+            // </link>
           <div key={packageItem.id} className='package-container'>
             <img src={packageItem.pic} alt={packageItem.itinerary.destination} className="package-image" />
             
