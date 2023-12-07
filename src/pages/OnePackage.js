@@ -1,5 +1,8 @@
 import React from 'react'
 import { useParams } from "react-router-dom";
+import BookingForm from '../Components/BookingForm';
+import PackageDetail from '../Components/PackageDetail';
+
 // import package details 
 
 
@@ -12,6 +15,8 @@ function OnePackage() {
     <div>OnePackage
         {/* package detials {packages.id} */}
         {/* book form {package , setpackage } */}
+        <PackageDetail/>
+         <BookingForm/>
     </div>
   )
 }

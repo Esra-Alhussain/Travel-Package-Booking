@@ -1,4 +1,5 @@
-import React from '.react';
+import React from 'react';
+import { useState } from 'react';
 
 const BookingForm = () => {
     // numTravelers: This variable holds the current state value.
@@ -6,6 +7,7 @@ const BookingForm = () => {
     //numTravelers = it change over time (as users interact with the input).
       // Initialize numTravelers state with a default value of 1.
     const [numTravelers, setNumTravelers] = useState(1);
+    const [availableTickets, setAvailableTickets] = useState(0);
 
     // This function will be called when the user changes the value in the number input.
     const handelNumTravelersChange =(e) => {
@@ -45,7 +47,7 @@ const BookingForm = () => {
          console.error('Error booking travel packagr:',error);
         }
     }
-    };
+   
 
     return(
         <div>
@@ -65,5 +67,5 @@ const BookingForm = () => {
             <p>Available Tickets: {availableTickets}</p>
         </div>
     )
-
+ };
 export default BookingForm;
