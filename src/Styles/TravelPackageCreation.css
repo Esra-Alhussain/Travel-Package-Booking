@@ -1,12 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Roboto:wght@100&display=swap");
 
 .container {
+  
   background-color: #d0e5f1;
   font-family: "Playfair Display", serif;
   font-family: "Roboto", sans-serif;
 }
 
 .container h1 {
+  padding-top: 1rem;
+margin-bottom: 2rem;
   color: #065d90;
   margin-left: 1rem;
 }

@@ -1,0 +1,12 @@
+.Herosection{
+background-image: url(/src/herosection.png);
+height:600px;
+color:#FFF0C2;
+font-family: "Playfair Display", serif;
+  font-family: "Roboto", sans-serif;
+  size: cover;
+}
+
+.Herosection h1{
+    font-size: 100px;
+}
