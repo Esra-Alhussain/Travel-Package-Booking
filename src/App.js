@@ -1,4 +1,3 @@
-
 import './App.css';
 import { useState, useEffect  } from 'react';
 
@@ -12,8 +11,8 @@ import Home from './pages/Home.js';
 import AllPackages from './pages/AllPackages.js';
 import OnePackage from './pages/OnePackage.js';
 
-
 function App() {
+   // a state variable to store the selected package ID
   const [Packages,setPackages]=useState([]);
   useEffect(() => {
     fetch("https://656ac402dac3630cf7274730.mockapi.io/Travel/packages")
@@ -36,13 +35,15 @@ function App() {
     {/* hello please write your compenent here to test how it looks then 
     delete it when you sure that it is working.. we will put there the nav bar 
     and the routes for the pages.. */}
-
       
+
       {/* <PackageBrowsing packages={Packages} /> */}
       
 
+
     </div>
   );
+
 }
 
 export default App;
