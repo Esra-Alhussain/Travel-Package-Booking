@@ -36,9 +36,8 @@ function PackageBrowsing({ packages,filter }) {
         <p className='package-null'>Based on your filters, nothing is available.</p> 
         ) : (
           filteredPackages.map((packageItem) => (
-            // <link key={packageItem.id} to={`/AllPackage/${packageItem.id}`} className='package-container'>
-            // </link>
           <div key={packageItem.id} className='package-container'>
+            <Link to={`/AllPackage/${packageItem.id}`}>
             <img src={packageItem.pic} alt={packageItem.itinerary.destination} className="package-image" />
             
             <div className='package-details-header'>
@@ -50,6 +49,8 @@ function PackageBrowsing({ packages,filter }) {
             {/* <p className='package-details'>Accommodation: {packageItem.itinerary.accommodation}</p> */}
             <p className='package-details'>Tickets Available: {packageItem.tickets}</p>
             <p className='package-price'>${packageItem.price} CAD</p>
+            </Link>
+            
             
           </div>
         ))

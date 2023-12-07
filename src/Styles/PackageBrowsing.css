@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
   }
 
 h2,
@@ -17,17 +18,16 @@ h2,
 }
 
 .package-container {
-    /* display: inline-block;
-    width: calc(33.33% - 40px); */
     margin: 20px;
     padding: 10px;
     /* border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     background-color: #fff;
-    /* text-align: center; */
     cursor: pointer;
+    text-decoration: none;
 }
+
   
 .package-image {
     display: flex;
@@ -44,6 +44,7 @@ h2,
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 0.5rem;
+    color: black;
 }
 
 .package-details-header h4 {
@@ -64,6 +65,7 @@ h2,
     margin-top: 10px;
     font-size: 18px;
     font-weight: 600;
+    color: black;
 }
 
 @media (width < 900px) {

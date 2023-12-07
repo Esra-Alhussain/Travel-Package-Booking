@@ -40,7 +40,7 @@ function App() {
       
 
 
-      {/* <PackageBrowsing packages={Packages} /> */}
+      {/* <AllPackages packages={Packages} /> */}
       
 
 
