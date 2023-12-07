@@ -1,6 +1,8 @@
 import './App.css';
 import { useState, useEffect  } from 'react';
 
+
+
 import TravelPackageCreation from './Components/TravelPackageCreation';
 
 import PackageBrowsing from './Components/PackageBrowsing';
@@ -37,7 +39,8 @@ function App() {
     and the routes for the pages.. */}
       
 
-      {/* <PackageBrowsing packages={Packages} /> */}
+
+      {/* <AllPackages packages={Packages} /> */}
       
 
 
