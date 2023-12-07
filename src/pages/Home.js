@@ -1,7 +1,7 @@
-import React from 'react';
+import { Route, Routes } from "react-router-dom";
 import Navbar from '../Components/Navbar';
 import HeroSection from '../Components/HeroSection';
-import TravelPackageCreation from '../Components/TravelPackageCreation';
+import TravelPackageCreation from '../Components/TravelPackageCreation';// define a nested route for the TravelPackageCreation component. 
 
 function Home() {
   return (
@@ -9,7 +9,9 @@ function Home() {
         {/* <Navbar/> */}
         <HeroSection/>
         <TravelPackageCreation/>
-        
+        <Routes>
+        <Route path="/TravelPackageCreation" element={<TravelPackageCreation />} />
+      </Routes>
 
     </div>
   )

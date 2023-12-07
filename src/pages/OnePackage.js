@@ -12,7 +12,7 @@ function OnePackage() {
     // const package pla pla= packages.id
   return (
     // compenets and u will pass the data here form this parent to the childerns 
-    <div>OnePackage
+    <div>
         {/* package detials {packages.id} */}
         {/* book form {package , setpackage } */}
         <PackageDetail/>

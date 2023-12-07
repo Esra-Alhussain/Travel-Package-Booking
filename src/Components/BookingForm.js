@@ -7,7 +7,7 @@ const BookingForm = () => {
     //numTravelers = it change over time (as users interact with the input).
       // Initialize numTravelers state with a default value of 1.
     const [numTravelers, setNumTravelers] = useState(1);
-    const [availableTickets, setAvailableTickets] = useState(0);
+    // const [availableTickets, setAvailableTickets] = useState(0);
 
     // This function will be called when the user changes the value in the number input.
     const handelNumTravelersChange =(e) => {
@@ -64,7 +64,7 @@ const BookingForm = () => {
                 />
             </label>
             <button onClick={handleBookNow}>Book Now</button>
-            <p>Available Tickets: {availableTickets}</p>
+            {/* <p>Available Tickets: {availableTickets}</p> */}
         </div>
     )
  };
