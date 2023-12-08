@@ -7,6 +7,7 @@ import Navbar from './Components/Navbar';
 import { Route, Routes } from "react-router-dom";
 import Home from './pages/Home.js';
 import AllPackages from './pages/AllPackages.js';
+import OnePackage from './pages/OnePackage.js';
 // import OnePackage from './pages/OnePackage.js';
 
 function App() {
@@ -24,8 +25,9 @@ function App() {
     <div>
     <Navbar/>
       <Routes>
-      <Route path="/" element={<Home/>}/>
+      <Route path="*" element={<Home/>}/> {/*this route should match any descendant route, allowing nested routes to render properly. */}
       <Route path="/AllPackages" element={<AllPackages packages={Packages} />} />
+      <Route path="/OnePackage/:id" element={<OnePackage packages={Packages}/>} />
       {/* <Route path="/AllPackages" element={<AllPackages packages={Packages}/>}/> */}
       {/* <Route path="/AllPackages/:id" element={<OnePackage />} /> */}
       {/* <Route path="/contact" component={Contact} />
