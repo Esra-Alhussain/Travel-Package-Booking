@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-const BookingForm = () => {
+const BookingForm = ({packageItem}) => {
     // numTravelers: This variable holds the current state value.
     // setNumTravelers: This function is used to update the state. When call     
     //numTravelers = it change over time (as users interact with the input).

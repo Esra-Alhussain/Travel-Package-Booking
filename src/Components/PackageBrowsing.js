@@ -35,7 +35,7 @@ function PackageBrowsing({ packages,filter }) {
         ) : (
           filteredPackages.map((packageItem) => (
           <div key={packageItem.id} className='package-container'>
-            <Link to={`/AllPackages/${packageItem.id}`}>
+            <Link to={`/OnePackage/${packageItem.id}`}>
            
 
             <img src={packageItem.pic} alt={packageItem.itinerary.destination} className="package-image" />
