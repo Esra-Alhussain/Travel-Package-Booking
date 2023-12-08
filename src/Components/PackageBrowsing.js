@@ -22,8 +22,6 @@ function PackageBrowsing({ packages,filter }) {
       (!filter.priceRange.minPrice || packageItem.price >= parseInt(filter.priceRange.minPrice)) &&
       (!filter.priceRange.maxPrice || packageItem.price < parseInt(filter.priceRange.maxPrice));
     
-      console.log('min:', filter.minPrice, 'max:',filter.maxPrice)
-      console.log(priceMatch);
 
     return destinationMatch && durationMatch && ratingMatch && priceMatch;
   });
@@ -37,7 +35,9 @@ function PackageBrowsing({ packages,filter }) {
         ) : (
           filteredPackages.map((packageItem) => (
           <div key={packageItem.id} className='package-container'>
-            <Link to={`/AllPackage/${packageItem.id}`}>
+            <Link to={`/AllPackages/${packageItem.id}`}>
+           
+
             <img src={packageItem.pic} alt={packageItem.itinerary.destination} className="package-image" />
             
             <div className='package-details-header'>
