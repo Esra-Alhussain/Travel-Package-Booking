@@ -1,6 +1,9 @@
 //The PackageDetails component will render the details of a selected travel package. 
+// import React, { useState, useEffect } from 'react';
+import '../Styles/PackageBooking.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 
-import React, { useState, useEffect } from 'react';
 
 //({ packageData }) is a destructuring assignment, extracting the packageData property from the props object.
 // equivalent version using the function keyword
@@ -49,23 +52,38 @@ const PackageDetail = ({packageItem}) => {
   // }, [packageId]); 
  
   return (
-    <div>
-      {/* if the 'selectedPackage' =true >>> shows a loading message
-      else check 'packageData' = exist >>> it displays detailed information about a travel package */}
+      // if the 'selectedPackage' =true >>> shows a loading message
+      // else check 'packageData' = exist >>> it displays detailed information about a travel package */}
     
-      {/* // it's checking if packageData is truthy (not null or undefined), it proceeds to render the details inside the <div>.
-      //this is the shorthand : {packageData &&  */}
-      {/* packageData !== null && packageData !== undefined &&  ( */}
-      <div>
-      <img src={packageItem.pic} alt="Package" />
-      <h2>Destination:{packageItem.itinerary.destination}</h2>
-      <p>Duration: {packageItem.itinerary.duration}</p>
-      <p>Accomodation: {packageItem.itinerary.accommodation}</p>
-      <p>Tickets Available: {packageItem.tickets}</p>
-      <p>Tickets Price: {packageItem.price}</p>
-      <p>Season: {packageItem.itinerary.season}</p>
-      <h3>Reviews</h3>
-      <ul>
+      //  it's checking if packageData is truthy (not null or undefined), it proceeds to render the details inside the
+      //this is the shorthand : {packageData &&
+      //  packageData !== null && packageData !== undefined &&  ( 
+      <>
+        <div className='first-section'>
+          <img src={packageItem.pic} alt="Package" />
+          <h2>Destination:{packageItem.itinerary.destination}</h2>
+        </div>
+        <div className='second-section'>
+        <div className='split-paragraph'>
+        <p className='statement'><b>Duration :</b> {packageItem.itinerary.duration}</p>
+        <p className='statement'><b>Accomodation:</b> {packageItem.itinerary.accommodation}</p>
+        <p className='statement'><b>Tickets Available: </b>{packageItem.tickets}</p>
+         </div>
+        <div className='split-paragraph'> 
+        <p className='statement'><b>Tickets Price: </b>{packageItem.price}</p>
+        </div>
+
+        <div className='third-section'>
+        <p className='box'><b>Rating</b>{packageItem['overall-rating']}</p>
+        <p className='box'><FontAwesomeIcon icon="fa-solid fa-stars" />Top rating</p>
+        <p className='box'>Family friendly</p>
+        <p className='box'>Near Park</p>
+        </div>
+        </div>
+
+        <div className='third-section'>
+        <h3>Reviews</h3>
+        <ul>
       {/*Map = is used to iterate over the array of reviews (packageData.reviews) and transform each review object into a JSX element */}
         {packageItem.reviews.map((review,index) => ( //review: This parameter represents each individual element (each review object) in the array 
           //  The resulting JSX elements are then wrapped in a <ul> (unordered list) to create a list of reviews.
@@ -77,9 +95,8 @@ const PackageDetail = ({packageItem}) => {
           </li>
         ))}
       </ul>
-      
-    </div>
-     </div>
+         </div>
+      </>
   );
 };
 

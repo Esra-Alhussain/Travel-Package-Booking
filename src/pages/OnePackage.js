@@ -33,7 +33,7 @@ function OnePackage({packages }) {
   //  When this array is empty, the effect runs only once when the component mounts. 
   //  This is useful for fetching data when the component is initially rendered.
 
-  console.log('Value of packageData:', packageData);
+  console.log('Value of packageData:', selectedPackage);
 
    return (
      // compenets and u will pass the data here form this parent to the childerns 
