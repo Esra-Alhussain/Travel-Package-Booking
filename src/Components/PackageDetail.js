@@ -1,8 +1,7 @@
 //The PackageDetails component will render the details of a selected travel package. 
 // import React, { useState, useEffect } from 'react';
 import '../Styles/PackageBooking.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { BsStars } from "react-icons/bs";
 
 
 //({ packageData }) is a destructuring assignment, extracting the packageData property from the props object.
@@ -69,19 +68,37 @@ const PackageDetail = ({packageItem}) => {
         <p className='statement'><b>Accomodation:</b> {packageItem.itinerary.accommodation}</p>
         <p className='statement'><b>Tickets Available: </b>{packageItem.tickets}</p>
          </div>
+
+        <div className='third-section'>
+        <p className='box'>{packageItem['overall-rating']}</p>
+          <div className='box'>
+          <BsStars />
+           <p className='box'><BsStars />Top rating</p>
+           </div>
+    
+           <div className='box'>
+           <BsStars />
+           <p className='box'>Family friendly</p>
+            </div>
+      
+            <div className='box'>
+           <BsStars />
+           <p className='box'>Near Park</p>
+           </div>
+           </div>
+
+        <div className=' price-section'>
+        <div className='split-paragraph'>
+        <p className='price-amount'><b>CAD ${packageItem.price}</b></p>
+        <button className='book-btn'>Book</button>
+        </div>
         <div className='split-paragraph'> 
-        <p className='statement'><b>Tickets Price: </b>{packageItem.price}</p>
+        <p className='charges-statement'> Includes taxes and charges</p>
         </div>
 
-        <div className='third-section'>
-        <p className='box'><b>Rating</b>{packageItem['overall-rating']}</p>
-        <p className='box'><FontAwesomeIcon icon="fa-solid fa-stars" />Top rating</p>
-        <p className='box'>Family friendly</p>
-        <p className='box'>Near Park</p>
         </div>
         </div>
-
-        <div className='third-section'>
+        <div className='review-section'>
         <h3>Reviews</h3>
         <ul>
       {/*Map = is used to iterate over the array of reviews (packageData.reviews) and transform each review object into a JSX element */}
