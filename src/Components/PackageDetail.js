@@ -70,20 +70,20 @@ const PackageDetail = ({packageItem}) => {
          </div>
 
         <div className='third-section'>
-        <p className='box'>{packageItem['overall-rating']}</p>
+        <p className='box overall'><b>{packageItem['overall-rating']}</b></p>
           <div className='box'>
-          <BsStars />
-           <p className='box'><BsStars />Top rating</p>
+          <BsStars className='icon'/>
+           <p>Top rating</p>
            </div>
     
            <div className='box'>
-           <BsStars />
-           <p className='box'>Family friendly</p>
+           <BsStars className='icon'/>
+           <p>Family friendly</p>
             </div>
       
             <div className='box'>
-           <BsStars />
-           <p className='box'>Near Park</p>
+           <BsStars className='icon'/>
+           <p>Near Park</p>
            </div>
            </div>
 

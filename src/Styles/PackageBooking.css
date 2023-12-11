@@ -83,7 +83,7 @@ img{
 }
 .box{
     display: inline-block;
-    border: #065D90 2px solid;
+    border: #B2DDF6 3px solid;
     padding-top: 37px;
     margin: 27px;
     padding: 4px;
@@ -134,6 +134,20 @@ img{
     border-radius:10px;
     font-size: large;
   }
+
+  .icon{
+    font-size: large;
+    margin-bottom: 0.2cm;
+  }
 /* .review-section{
 
 } */
+.overall{
+    font-size: large;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #B2DDF6;
+    border: #B2DDF6;
+    padding-top:19px;
+}
