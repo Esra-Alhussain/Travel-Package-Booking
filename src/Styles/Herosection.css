@@ -22,3 +22,13 @@
 .Herosection h2 {
     margin-left: 66px;
   }
+
+  @media screen and (max-width: 800px) {
+    .Herosection h1{
+      font-size:60px ;
+      margin-left: 20px;
+    }
+    .Herosection h2 {
+      margin-left: 20px;
+    }
+  }
