@@ -1,0 +1,139 @@
+body{
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    color: #065D90;
+}
+
+.first-section{
+    display: flex;
+    flex-direction: row;
+    /* width: 60%;
+    height: auto; */
+    margin-left: 22%;
+    padding: 5%;
+    max-width: 60%; 
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: medium;
+    text-align: center;
+}
+
+img{
+    flex:1;
+    max-width: 100%; /* Limits the image to the width of its container */
+    max-height: 100%; /* Limits the image to the height of its container */
+    height: auto; 
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 13px;
+}
+.second-section{
+    display: flex;
+    flex-direction: column;
+    /* width: 60%;
+    height: auto; */
+    margin-left: 17%;
+    padding: 2%;
+    max-width: 60%; 
+    max-height: 100%;
+    justify-content: center;
+   /* align-items: center; */
+    font-size: medium;
+    /* text-align: left; */
+    border: 2px solid black;
+    justify-content: space-between;
+}
+.split-paragraph {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .statement-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 0 calc(33.33% - 10px); /* 33.33% width for each statement container with some spacing */
+    margin-left: 55px; 
+}
+
+  .statement {
+    text-align: left; /* Adjust as needed */
+  }
+
+  .statement:nth-child(3n) {
+    text-align: right; /* Set text-align to right for every third statement */
+  }
+
+  @media (max-width: 800px) {
+    .statement-container {
+      flex-basis: calc(100% - 10px); /* 100% width for each statement container on smaller screens */
+    }
+}
+
+.third-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* border: black 2px solid; */
+    justify-content: center ;
+}
+.box{
+    display: inline-block;
+    border: #065D90 2px solid;
+    padding-top: 37px;
+    margin: 27px;
+    padding: 4px;
+    font-size: small;
+    height: 70px;
+    width: 88px;
+    border-radius:10px;
+    color: #065D90;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.charges-statement{
+    font-size: smaller;
+}
+.price-amount{
+    font-size: large;
+    margin-top:19px;
+    
+}
+ /* Style for the container with line */
+.price-section{
+    position: relative;
+    margin:10px;
+    display: flex;
+    flex-direction: column;
+}
+  /* Style for the line */
+  .price-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px; 
+    background-color: #065D90; 
+    
+  }
+  .book-btn{
+    padding:10px;
+    height: 86%;
+    width:25%;
+    margin-top: 30px;
+    background-color: #065D90; 
+    color: white;
+    border: #065D90;
+    border-radius:10px;
+    font-size: large;
+  }
+/* .review-section{
+
+} */
