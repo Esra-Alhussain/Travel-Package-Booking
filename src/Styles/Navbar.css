@@ -57,12 +57,13 @@
       display: flex;
     flex-direction: column;
 }
+#navicon{
+  display: block;
+}
     }
   
     
-    #navicon{
-      display: block;
-    }
+   
   
    
     
