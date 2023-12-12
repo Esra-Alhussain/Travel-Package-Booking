@@ -16,6 +16,7 @@ const BookingForm = ({onBookNow}) => {
     //e.target.value: Retrieves the current value of the input field.
         setNumTravelers(e.target.value);
     };
+    
 
     //This function will be called when the "Book Now" button is clicked.
     // send a booking request to the server with the number of travelers.
@@ -53,23 +54,24 @@ const BookingForm = ({onBookNow}) => {
    
     
 
-    return(
-        <div >
-            <label>
-                Number of Travelers: 
-                <input 
-                type="number"
+    // return(
+    //     <div >
+    //         <label>
+    //             Number of Travelers: 
+    //             <input 
+    //             type="number"
 
-           // Set the value of the input to the current value of the numTravelers state.                              
-                value={numTravelers} 
-          // Attach the handleNumTravelersChange function to the input's onChange event.
-                onChange={handelNumTravelersChange} 
-                min="1"
-                />
-            </label>
-            <button onClick={handleBookNow}>Book Now</button>
-            {/* <p>Available Tickets: {availableTickets}</p> */}
-        </div>
-    )
+    //        // Set the value of the input to the current value of the numTravelers state.                              
+    //             value={numTravelers} 
+    //       // Attach the handleNumTravelersChange function to the input's onChange event.
+    //             onChange={handelNumTravelersChange} 
+    //             min="1"
+    //             />
+    //         </label>
+    //         <button onClick={handleBookNow}>Book Now</button>
+    //         {/* <p>Available Tickets: {availableTickets}</p> */}
+    //     </div>
+    // )
  };
-export default BookingForm;
+ export default BookingForm;
+

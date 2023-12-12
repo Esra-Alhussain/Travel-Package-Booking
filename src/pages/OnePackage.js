@@ -15,12 +15,6 @@ function OnePackage({packages }) {
    const { id } = useParams();
    const selectedPackage  = packages && packages.find((pkg) => pkg.id === id);
 
-   if (!selectedPackage) {
-    // Handle the case where the selected package is not found
-    console.error(`Package with id ${id} not found`);
-    return <p>Package not found</p>;
-  }
-
    //fetch the travel package data using useEffect hook or side effects in functional components
    useEffect(() =>{
     if (!selectedPackage) {
@@ -39,7 +33,7 @@ function OnePackage({packages }) {
         const response = await fetch(`https://656ac402dac3630cf7274730.mockapi.io/Travel/packages/${selectedPackage.id}`)
         const data = await response.json(); //extracts the JSON data from the response 
         // console.log('Fetch URL:', `https://656ac402dac3630cf7274730.mockapi.io/Travel/packages/${selectedPackage.id}`);
-        console.log('Packages:', packages);
+        console.log('Packages:', selectedPackage);
         console.log('ID:', id);
 
         // Check if the component is still mounted before updating state

@@ -2,8 +2,10 @@
 // import React, { useState, useEffect } from 'react';
 import '../Styles/PackageBooking.css'
 import { BsStars } from "react-icons/bs";
-import BookingForm from './BookingForm';
+// import BookingForm, { numTravelers, handleNumTravelersChange } from './BookingForm';
 import { useState } from 'react';
+import useBooking from './BookingHook';
+
 
 //({ packageData }) is a destructuring assignment, extracting the packageData property from the props object.
 // equivalent version using the function keyword
@@ -16,11 +18,11 @@ import { useState } from 'react';
 //packageData as a prop (data for a specific travel package) and manages its internal state using the useState hook
 //<PackageDetails packageData={examplePackage} />
 
-const PackageDetail = ({packageItem}) => {
+const PackageDetail = ({packageItem, onBookNow}) => {
   // setAvailableTickets =>  the previous state of the availableTickets variable.
   const [availableTickets, setAvailableTickets] = useState(packageItem.tickets);
+  const { numTravelers, handleNumTravelersChange, handleBookNow } = useBooking();
 
-  setAvailableTickets(packageItem.tickets);
   console.log(`this is the tickets `,availableTickets)
 
   //When this function is called (by clicking a button), it updates the state of availableTickets using setAvailableTickets.
@@ -31,6 +33,12 @@ const PackageDetail = ({packageItem}) => {
     // Inside this anonymus function, calculate the new value for availableTickets by subtracting numTravelers from the previous value
     setAvailableTickets((prevTickets) => prevTickets - numTravelers);//the result of the functionn is the new state of the availableTickets variable.
   };
+
+  // const handleBookingInPackageDetail = async () => {
+  //   // Custom logic in PackageDetail if needed
+  //   console.log('Booking initiated in PackageDetail with numTravelers:', numTravelers);
+  //   onBookNow(numTravelers);
+  // };
 
   // setAvailableTickets(function(prevTickets) {
   //   return updateAvailableTickets(prevTickets, numTravelers);
@@ -83,6 +91,7 @@ const PackageDetail = ({packageItem}) => {
           <h2>Destination:{packageItem.itinerary.destination}</h2>
         </div>
         <div className='second-section'>
+        <p className='flight-destination'>Your flight to {packageItem.itinerary.destination}</p>
         <div className='split-paragraph'>
         <p className='statement'><b>Duration :</b> {packageItem.itinerary.duration}</p>
         <p className='statement'><b>Accomodation:</b> {packageItem.itinerary.accommodation}</p>
@@ -110,8 +119,31 @@ const PackageDetail = ({packageItem}) => {
         <div className=' price-section'>
         <div className='split-paragraph'>
         <p className='price-amount'><b>CAD ${packageItem.price}</b></p>
-        <BookingForm onBookNow={handleBooking} />
-        <button className='book-btn'>Book</button>
+        {/* <BookingForm className='book-btn' onBookNow={handleBooking} /> */}
+        <div className='traveler-form'>
+            <label>
+                Number of Travelers: 
+                <input 
+                type="number"
+
+           // Set the value of the input to the current value of the numTravelers state.                              
+                value={numTravelers} 
+          // Attach the handleNumTravelersChange function to the input's onChange event.
+                onChange={handleNumTravelersChange} 
+                min="1"
+                />
+            </label>
+            {/* <BookingForm onBookNow={handleBooking}/> */}
+            <button onClick={handleBookNow}>Book Now</button>
+            {/* <BookingForm
+              onBookNow={handleBookingInPackageDetail}
+              numTravelers={numTravelers}
+              handleNumTravelersChange={handleNumTravelersChange}
+            />  */}
+
+            {/* <p>Available Tickets: {availableTickets}</p> */}
+        </div>
+        {/* <button className='book-btn'>Book</button> */}
         </div>
         <div className='split-paragraph'> 
         <p className='charges-statement'> Includes taxes and charges</p>

@@ -35,7 +35,7 @@ img{
     flex-direction: column;
     /* width: 60%;
     height: auto; */
-    margin-left: 17%;
+    margin-left: 19%;
     padding: 2%;
     max-width: 60%; 
     max-height: 100%;
@@ -45,6 +45,13 @@ img{
     /* text-align: left; */
     border: 2px solid black;
     justify-content: space-between;
+    width: 900%;
+    height: 200%;
+}
+.flight-destination{
+  font-weight:bolder;
+  font-size: x-large;
+  margin-bottom: 40px;
 }
 .split-paragraph {
     display: flex;
@@ -80,16 +87,18 @@ img{
     align-items: center;
     /* border: black 2px solid; */
     justify-content: center ;
+    margin-bottom: 44px;
 }
 .box{
     display: inline-block;
-    border: #B2DDF6 3px solid;
+    border: #065D90 3px solid;
     padding-top: 37px;
     margin: 27px;
-    padding: 4px;
+    margin-top: 44px;
+    padding: 6px;
     font-size: small;
-    height: 70px;
-    width: 88px;
+    height: 100px;
+    width: 120px;
     border-radius:10px;
     color: #065D90;
     align-items: center;
