@@ -1,13 +1,14 @@
 import React from 'react';
 import { useState } from 'react';
 
-const BookingForm = ({packageItem}) => {
+//pass a callback prop (onBookNow) 
+const BookingForm = ({onBookNow}) => {
+    //I use the useState hook to manage the state of numTravelers and it change over time (as users interact with the input).
     // numTravelers: This variable holds the current state value.
     // setNumTravelers: This function is used to update the state. When call     
-    //numTravelers = it change over time (as users interact with the input).
       // Initialize numTravelers state with a default value of 1.
     const [numTravelers, setNumTravelers] = useState(1);
-    // const [availableTickets, setAvailableTickets] = useState(0);
+    const [availableTickets, setAvailableTickets] = useState(0);
 
     // This function will be called when the user changes the value in the number input.
     const handelNumTravelersChange =(e) => {
@@ -19,6 +20,7 @@ const BookingForm = ({packageItem}) => {
     //This function will be called when the "Book Now" button is clicked.
     // send a booking request to the server with the number of travelers.
     // Update available tickets on successful booking.
+    // sending a PATCH request to the server with the numTravelers.
     //If the server responds with success (status code 200-299), it updates the local state to reflect the reduced number of available tickets. If there is an error during this process, it logs an error message.
     const handleBookNow = async () => {  //async keyword indicates that this function can perform asynchronous operations.
     // Send booking request to the mockApi with numTravelers
@@ -36,6 +38,7 @@ const BookingForm = ({packageItem}) => {
         // Check if the booking was successful
         if (response.ok){
         // Update available tickets in the state
+        console.log('Booking successful');
 
         }else{
         // Handle the case where the booking was not successful
@@ -48,9 +51,10 @@ const BookingForm = ({packageItem}) => {
         }
     }
    
+    
 
     return(
-        <div>
+        <div >
             <label>
                 Number of Travelers: 
                 <input 

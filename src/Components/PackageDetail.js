@@ -2,7 +2,8 @@
 // import React, { useState, useEffect } from 'react';
 import '../Styles/PackageBooking.css'
 import { BsStars } from "react-icons/bs";
-
+import BookingForm from './BookingForm';
+import { useState } from 'react';
 
 //({ packageData }) is a destructuring assignment, extracting the packageData property from the props object.
 // equivalent version using the function keyword
@@ -16,6 +17,25 @@ import { BsStars } from "react-icons/bs";
 //<PackageDetails packageData={examplePackage} />
 
 const PackageDetail = ({packageItem}) => {
+  // setAvailableTickets =>  the previous state of the availableTickets variable.
+  const [availableTickets, setAvailableTickets] = useState(packageItem.tickets);
+
+  setAvailableTickets(packageItem.tickets);
+  console.log(`this is the tickets `,availableTickets)
+
+  //When this function is called (by clicking a button), it updates the state of availableTickets using setAvailableTickets.
+  const handleBooking = (numTravelers) => {
+    //setAvailableTickets => function to update the state variable availableTickets, when called, it triggers a re-render of the component with the updated state.
+    //prevTickets as a parameter, calculate the new state value based on the previous state 
+    //React automatically provides the previous state value to the function you pass to setAvailableTickets.
+    // Inside this anonymus function, calculate the new value for availableTickets by subtracting numTravelers from the previous value
+    setAvailableTickets((prevTickets) => prevTickets - numTravelers);//the result of the functionn is the new state of the availableTickets variable.
+  };
+
+  // setAvailableTickets(function(prevTickets) {
+  //   return updateAvailableTickets(prevTickets, numTravelers);
+  // });
+
     // State to  stores the details of the selected travel package
   // const [packageData, setpackageData] = useState(null);
     // State to indicates whether the data is still being fetched 
@@ -90,6 +110,7 @@ const PackageDetail = ({packageItem}) => {
         <div className=' price-section'>
         <div className='split-paragraph'>
         <p className='price-amount'><b>CAD ${packageItem.price}</b></p>
+        <BookingForm onBookNow={handleBooking} />
         <button className='book-btn'>Book</button>
         </div>
         <div className='split-paragraph'> 
@@ -99,7 +120,7 @@ const PackageDetail = ({packageItem}) => {
         </div>
         </div>
         <div className='review-section'>
-        <h3>Reviews</h3>
+        <h2>Traveler’s Reviews</h2>
         <ul>
       {/*Map = is used to iterate over the array of reviews (packageData.reviews) and transform each review object into a JSX element */}
         {packageItem.reviews.map((review,index) => ( //review: This parameter represents each individual element (each review object) in the array 
