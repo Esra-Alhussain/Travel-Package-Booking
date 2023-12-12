@@ -84,8 +84,3 @@ function OnePackage({packages }) {
 
 export default OnePackage
 
-    //   // fetch 
-  //   const { id } = useParams();
-  //   // const package pla pla= packages.id
-  //       {/* package detials {packages.id} */}
-  //       {/* book form {package , setpackage } */}
