@@ -37,3 +37,33 @@
 .Navbar h3 {
     margin: 0;
   }
+  #navicon{
+    display: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .leftside{
+      position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #065d90;
+    width: 0px;
+    height: calc(100vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    }
+    .leftside.active {
+      width: 270px;
+      display: flex;
+    flex-direction: column;
+}
+#navicon{
+  display: block;
+}
+    }
+  
+    
+   
+  
+   
+    
