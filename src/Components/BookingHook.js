@@ -2,34 +2,61 @@
 
 import { useState } from "react";
 
-const useBooking = () => {
+// The custom hook takes an initial number of available tickets as a parameter to make it more flexible and reusable across different packages 
+const useBooking = (initialAvailableTickets, packageId) => {
+    // State variables to manage the number of travelers and available tickets.
     const [numTravelers, setNumTravelers] = useState(0);
+    const [availableTickets, setAvailableTickets] = useState(initialAvailableTickets);
 
+    // Function to handle changes in the number of travelers input.
     const handleNumTravelersChange = (e) => {
-        setNumTravelers(e.target.value);
+        // Parse the initial string input value to an integer and update the state.
+        // include the radix (base) as 10 to indicates decimal representation
+        setNumTravelers(parseInt(e.target.value, 10));
     };
 
+    // Function to handle the booking process.
+    //PATCH request is telling the server to update the resource at the specified URL with the new number of travelers provided in the numTravelers variable
     const handleBookNow = async () => {
         try {
+        //check if the selected number of travelers is greater than the available tickets
+          if (numTravelers > availableTickets){
+            //Display an error alert if there are not enough ticket 
+            alert("Error: Insufficient tickets available. Please choose a smaller quantity")
+            return; //Do not proceed with booking
+           }
+
           // Simulate a booking request to the server using fetch with PATCH method
-          const response = await fetch(`https://656ac402dac3630cf7274730.mockapi.io/Travel/packages/{$packageId}`, {
+          const response = await fetch(`https://656ac402dac3630cf7274730.mockapi.io/Travel/packages/${packageId}`, {
             method: 'PATCH',
-            headers: {
-              'Content-Type': 'application/json',
+            headers: { //indicate that the bodyof the request is in JSON format
+              'Content-Type': 'application/json', //convert the JavaScript object { numTravelers } into a JSON-formatted string
             },
             body: JSON.stringify({ numTravelers }),
           });
-    
+
+         // Check if the booking request was successful.
           if (response.ok) {
-            console.log('Booking successful');
+            // Update the available tickets in the state by subtracting the booked quantity.
+           setAvailableTickets((prevTickets) => prevTickets - numTravelers)
+
+            // Display a confirmation window with booking details.
+            const confirmBooking = window.confirm(`Booking successful for ${numTravelers} travelers. Available tickets: ${availableTickets - numTravelers}`);
+          
+          // If the user cancels the confirmation, revert the available tickets.
+        if (!confirmBooking) {
+            setAvailableTickets((prevTickets) => prevTickets + numTravelers);
+          }
           } else {
+            // Log an error message if the booking request fails.
             console.error('Booking failed');
           }
         } catch (error) {
           console.error('Error booking travel package:', error);
         }
       };
-    
+
+    // Return an object with the state variables and functions for external use.
       return { numTravelers, handleNumTravelersChange, handleBookNow };
     };
     

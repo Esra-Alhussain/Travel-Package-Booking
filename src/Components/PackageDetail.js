@@ -21,7 +21,8 @@ import useBooking from './BookingHook';
 const PackageDetail = ({packageItem, onBookNow}) => {
   // setAvailableTickets =>  the previous state of the availableTickets variable.
   const [availableTickets, setAvailableTickets] = useState(packageItem.tickets);
-  const { numTravelers, handleNumTravelersChange, handleBookNow } = useBooking();
+  //initialized the hook with an initial available ticket quantity(useBooking(100))
+  const { numTravelers, handleNumTravelersChange, handleBookNow } = useBooking(packageItem?.availableTickets, packageItem?.id);
 
   console.log(`this is the tickets `,availableTickets)
 
