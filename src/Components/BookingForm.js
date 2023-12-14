@@ -54,24 +54,23 @@ const BookingForm = ({onBookNow}) => {
    
     
 
-    // return(
-    //     <div >
-    //         <label>
-    //             Number of Travelers: 
-    //             <input 
-    //             type="number"
-
-    //        // Set the value of the input to the current value of the numTravelers state.                              
-    //             value={numTravelers} 
-    //       // Attach the handleNumTravelersChange function to the input's onChange event.
-    //             onChange={handelNumTravelersChange} 
-    //             min="1"
-    //             />
-    //         </label>
-    //         <button onClick={handleBookNow}>Book Now</button>
-    //         {/* <p>Available Tickets: {availableTickets}</p> */}
-    //     </div>
-    // )
+    return(
+        <div >
+            {/* <label>
+                Number of Travelers: 
+                <input 
+                type="number"
+                 // Set the value of the input to the current value of the numTravelers state.                              
+                value={numTravelers} 
+                 // Attach the handleNumTravelersChange function to the input's onChange event.
+                onChange={handelNumTravelersChange} 
+                min="1"
+                />
+            </label> */}
+            <button className='book-btn' onClick={handleBookNow}>Book Now</button>
+            {/* <p>Available Tickets: {availableTickets}</p> */}
+        </div>
+    )
  };
  export default BookingForm;
 

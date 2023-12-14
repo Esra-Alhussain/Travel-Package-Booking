@@ -46,7 +46,7 @@ img{
     border: 2px solid black;
     justify-content: space-between;
     width: 900%;
-    height: 200%;
+    height: 800%;
 }
 .flight-destination{
   font-weight:bolder;
@@ -95,10 +95,9 @@ img{
     padding-top: 37px;
     margin: 27px;
     margin-top: 44px;
-    padding: 6px;
     font-size: small;
-    height: 100px;
-    width: 120px;
+    height: 18vh;
+    width:25vh;
     border-radius:10px;
     color: #065D90;
     align-items: center;
@@ -110,9 +109,8 @@ img{
     font-size: smaller;
 }
 .price-amount{
-    font-size: large;
-    margin-top:19px;
-    
+    font-size: x-large;
+    margin-top:44px;
 }
  /* Style for the container with line */
 .price-section{
@@ -132,16 +130,39 @@ img{
     background-color: #065D90; 
     
   }
+  .traveler-form{
+    background-color: #B2DDF6;
+    height: 50px;
+    width: 290px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 26%; */
+    margin-top: 50px;
+  }
+  input{
+    border-radius: 8px;
+    border: #065D90;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
   .book-btn{
     padding:10px;
-    height: 86%;
-    width:25%;
+    height: 66%;
+    width:140px;
     margin-top: 30px;
+    margin-left: 430px;
     background-color: #065D90; 
     color: white;
     border: #065D90;
     border-radius:10px;
     font-size: large;
+    align-items: center;
+    margin-bottom: 200px;;
   }
 
   .icon{
@@ -152,11 +173,10 @@ img{
 
 } */
 .overall{
-    font-size: large;
+    font-size:19pt;
     text-align: center;
     align-items: center;
     justify-content: center;
     background-color: #B2DDF6;
     border: #B2DDF6;
-    padding-top:19px;
 }

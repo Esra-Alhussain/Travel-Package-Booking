@@ -5,6 +5,7 @@ import { BsStars } from "react-icons/bs";
 // import BookingForm, { numTravelers, handleNumTravelersChange } from './BookingForm';
 import { useState } from 'react';
 import useBooking from './BookingHook';
+// import BookingForm from './BookingForm';
 
 
 //({ packageData }) is a destructuring assignment, extracting the packageData property from the props object.
@@ -22,7 +23,7 @@ const PackageDetail = ({packageItem, onBookNow}) => {
   // setAvailableTickets =>  the previous state of the availableTickets variable.
   const [availableTickets, setAvailableTickets] = useState(packageItem.tickets);
   //initialized the hook with an initial available ticket quantity(useBooking(100))
-  const { numTravelers, handleNumTravelersChange, handleBookNow } = useBooking(packageItem?.availableTickets, packageItem?.id);
+  const { numTravelers, handleNumTravelersChange, handleBookNow } = useBooking(packageItem);
 
   console.log(`this is the tickets `,availableTickets)
 
@@ -117,10 +118,22 @@ const PackageDetail = ({packageItem, onBookNow}) => {
            </div>
            </div>
 
+           <div className='chesckIn-tips'>
+           <p><b>Check-in tips</b></p>
+           <ul>
+            <li>Booking reference: 6 letters and/or numbers (e.g.: ABC123)</li>
+            <li>Aeroplan ID: 9 numbers (e.g.: 123456789)</li>
+            <li>Ticket number: 13 numbers (e.g.: 0141234567890)</li>
+            <li>AC employee number: 8 letters and/or numbers (e.g.: AC012345)</li>
+           </ul>
+
+           </div>
+
         <div className=' price-section'>
         <div className='split-paragraph'>
+          
         <p className='price-amount'><b>CAD ${packageItem.price}</b></p>
-        {/* <BookingForm className='book-btn' onBookNow={handleBooking} /> */}
+       
         <div className='traveler-form'>
             <label>
                 Number of Travelers: 
@@ -135,7 +148,6 @@ const PackageDetail = ({packageItem, onBookNow}) => {
                 />
             </label>
             {/* <BookingForm onBookNow={handleBooking}/> */}
-            <button onClick={handleBookNow}>Book Now</button>
             {/* <BookingForm
               onBookNow={handleBookingInPackageDetail}
               numTravelers={numTravelers}
@@ -144,19 +156,23 @@ const PackageDetail = ({packageItem, onBookNow}) => {
 
             {/* <p>Available Tickets: {availableTickets}</p> */}
         </div>
-        {/* <button className='book-btn'>Book</button> */}
         </div>
         <div className='split-paragraph'> 
         <p className='charges-statement'> Includes taxes and charges</p>
+          
         </div>
 
+        {/* <div className='split-paragraph'> 
+        <BookingForm />          
+        </div> */}
+       
         </div>
         </div>
-        <div className='review-section'>
+        {/* <div className='review-section'>
         <h2>Traveler’s Reviews</h2>
         <ul>
       {/*Map = is used to iterate over the array of reviews (packageData.reviews) and transform each review object into a JSX element */}
-        {packageItem.reviews.map((review,index) => ( //review: This parameter represents each individual element (each review object) in the array 
+        {/* {packageItem.reviews.map((review,index) => ( //review: This parameter represents each individual element (each review object) in the array 
           //  The resulting JSX elements are then wrapped in a <ul> (unordered list) to create a list of reviews.
           //index paramete is the index (position) of the current review within the array
           <li key={index}> 
@@ -164,9 +180,9 @@ const PackageDetail = ({packageItem, onBookNow}) => {
             <p>Comment: {review.comment}</p>
             <p>Rating: {review.rating}</p>
           </li>
-        ))}
-      </ul>
-         </div>
+        ))} */}
+       {/* </ul>  */}
+         {/* </div> */}
       </>
   );
 };
