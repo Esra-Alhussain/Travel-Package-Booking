@@ -29,7 +29,7 @@ function PackageDetail({packageItem}){
         <div className='split-paragraph'>
            <p className='statement'><b>Duration :</b> {packageItem.itinerary.duration}</p>
            <p className='statement'><b>Accomodation:</b> {packageItem.itinerary.accommodation}</p>
-           <p className='statement'><b>Tickets Available: </b>{packageItem.tickets}</p>
+           <p className='statement'><b>Tickets Available: </b>{ availableTickets }</p>
         </div>
         <div className='third-section'>
            <p className='box overall'><b>{packageItem['overall-rating']}</b></p>
