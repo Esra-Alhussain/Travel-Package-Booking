@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import BookingForm from '../Components/BookingForm';
-import PackageDetail from '../Components/PackageDetail';
+import PackageDetail from '../Components/PackageDetail';  //1- Import the Child Component in the Parent Component 
 import { useParams } from "react-router-dom"; //to get the package ID from the URL parameters. 
-
-// import package details 
 
 
 function OnePackage({packages }) {
@@ -63,12 +61,17 @@ function OnePackage({packages }) {
      <div>
       {/* This a ternary conditional expression */}
       {selectedPackage ? ( // Check if packageData is available before rendering
-      <>
+       <>
+        <PackageDetail packageItem={selectedPackage}
+        />
          {/* Render PackageDetail and pass the data as props */}
-        <PackageDetail packageItem={selectedPackage}/>
+         {/* pass the necessary props as attributes to the packageDetail component */}
+         {/* Receive Props in Child Component */}
+         
          {/* Render BookingForm and pass the data as props */}
-         <BookingForm packageItem={selectedPackage}/>
-         </>
+        {/* <BookingForm packageItem={selectedPackage}
+        /> */}
+       </>
       ) : (
         <p> Loading...</p>
           )}
@@ -76,5 +79,5 @@ function OnePackage({packages }) {
   );
 }
 
-export default OnePackage
+export default OnePackage;
 
