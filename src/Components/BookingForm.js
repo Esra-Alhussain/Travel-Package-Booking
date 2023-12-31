@@ -72,25 +72,26 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
             console.log('This is the availableTickets', availableTickets)
             console.log('This is the numTravelers', numTravelers)
 
-                const confirmBooking = window.confirm(
+                const confirmBooking = window.alert(
                 `Booking successful for ${numTravelers} travelers. Available tickets: ${newTickets}`);
             
-            //If the user confirms the booking, proceed with updating available tickets.
-            if (confirmBooking) {
-                // Update available tickets in the parent component
-                // setAvailableTickets((prevTickets) => prevTickets + numTravelers);
                 handleUpdateTickets(numTravelers);
                 console.log('Booking successful');
-            } else {
-                // If the user cancels the confirmation, revert the available tickets.
-                console.log("this is a setAvilableTickets", setAvailableTickets);
-                const cancelConfirmed = window.confirm('Are you sure you want to cancel this booking?');
 
-            if (cancelConfirmed) {
-                // Call the cancellation function
-                handleCancellation();
-            }
-          }
+            //If the user confirms the booking, proceed with updating available tickets.
+        //     if (confirmBooking) {
+        //         // Update available tickets in the parent component
+        //         // setAvailableTickets((prevTickets) => prevTickets + numTravelers);
+        //         handleUpdateTickets(numTravelers);
+        //         console.log('Booking successful');
+        //     } else {
+        //         // If the user cancels the confirmation, revert the available tickets.
+        //         console.log("this is a setAvilableTickets", setAvailableTickets);
+               
+        //         // Call the cancellation function
+        //         handleCancellation();
+        
+        //   }
         }
         catch(error){ //catch the error
          // Handle errors that might occur during the booking process
@@ -108,6 +109,9 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
     //onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
 
     const handleCancellation = async () => {
+        const cancelConfirmed = window.alert('Are you sure you want to cancel this booking?');
+
+        if (cancelConfirmed) {
         try {
         const data ={
             ...packageItem,
@@ -121,12 +125,13 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
             headers: {
                 'Content-Type': 'application/json',
             },
-        }
+         }
         );
         //check if the cancellation was successful 
         if (response.status >= 200 && response.status < 300){
            //update available tickets in the parent component 
-           handleUpdateTickets(-numTravelers); //the negative sign to increase the available tickets
+           handleUpdateTickets(0); // No change in available tickets
+           setAvailableTickets = packageItem.tickets + numTravelers;
            console.log('Cancellation successful');
         }else{
             console.error('Error cancelling booking:', response.statusText);
@@ -135,6 +140,7 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
             console.error('Error cancelling booking:', error);
         }
       };
+    };
 
     return(
         <div>
