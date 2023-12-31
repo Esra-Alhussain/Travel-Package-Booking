@@ -1,4 +1,4 @@
-body{
+ /* body{
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -9,8 +9,6 @@ body{
 .first-section{
     display: flex;
     flex-direction: row;
-    /* width: 60%;
-    height: auto; */
     margin-left: 22%;
     padding: 5%;
     max-width: 60%; 
@@ -23,9 +21,8 @@ body{
 
 img{
     flex:1;
-    max-width: 100%; /* Limits the image to the width of its container */
-    max-height: 100%; /* Limits the image to the height of its container */
-    height: auto; 
+    max-width: 100%; 
+    max-height: 100%; 
     object-fit: cover;
     border-radius: 8px;
     margin: 13px;
@@ -33,20 +30,20 @@ img{
 .second-section{
     display: flex;
     flex-direction: column;
-    /* width: 60%;
-    height: auto; */
     margin-left: 19%;
     padding: 2%;
     max-width: 60%; 
     max-height: 100%;
     justify-content: center;
-   /* align-items: center; */
     font-size: medium;
-    /* text-align: left; */
     border: 2px solid black;
     justify-content: space-between;
     width: 900%;
     height: 800%;
+}
+.chesckIn-tips ul{
+  list-style-type: none;
+  margin-bottom: 30px;
 }
 .flight-destination{
   font-weight:bolder;
@@ -63,21 +60,21 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex: 1 0 calc(33.33% - 10px); /* 33.33% width for each statement container with some spacing */
+    flex: 1 0 calc(33.33% - 10px);
     margin-left: 55px; 
 }
 
   .statement {
-    text-align: left; /* Adjust as needed */
+    text-align: left; 
   }
 
   .statement:nth-child(3n) {
-    text-align: right; /* Set text-align to right for every third statement */
+    text-align: right; 
   }
 
   @media (max-width: 800px) {
     .statement-container {
-      flex-basis: calc(100% - 10px); /* 100% width for each statement container on smaller screens */
+      flex-basis: calc(100% - 10px); 
     }
 }
 
@@ -85,7 +82,6 @@ img{
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* border: black 2px solid; */
     justify-content: center ;
     margin-bottom: 44px;
 }
@@ -112,14 +108,12 @@ img{
     font-size: x-large;
     margin-top:44px;
 }
- /* Style for the container with line */
 .price-section{
     position: relative;
     margin:10px;
     display: flex;
     flex-direction: column;
 }
-  /* Style for the line */
   .price-section::before {
     content: "";
     position: absolute;
@@ -137,7 +131,6 @@ img{
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* margin-left: 26%; */
     margin-top: 50px;
   }
   input{
@@ -169,9 +162,7 @@ img{
     font-size: large;
     margin-bottom: 0.2cm;
   }
-/* .review-section{
 
-} */
 .overall{
     font-size:19pt;
     text-align: center;
@@ -179,4 +170,201 @@ img{
     justify-content: center;
     background-color: #B2DDF6;
     border: #B2DDF6;
+}  */
+body {
+  margin: 0;
+  padding: 0;
+  color: #065D90;
+}
+
+.first-section {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 5%;
+  max-width: 100%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem; /* Responsive font size */
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 13px;
+}
+
+.second-section {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  padding: 2%;
+  max-width: 100%;
+  justify-content: center;
+  font-size: 1rem; /* Responsive font size */
+  border: 2px solid black;
+  justify-content: space-between;
+}
+
+.chesckIn-tips ul {
+  list-style-type: none;
+  margin-bottom: 1rem;
+}
+
+.flight-destination {
+  font-weight: bolder;
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 1.5rem;
+}
+
+.split-paragraph {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.statement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 0 calc(33.33% - 10px);
+  margin-left: 2%; /* Adjusted margin for smaller screens */
+}
+
+.statement {
+  text-align: left;
+}
+
+.statement:nth-child(3n) {
+  text-align: right;
+}
+
+@media (max-width: 800px) {
+  .statement-container {
+      flex-basis: calc(100% - 10px);
+      margin-left: 0; /* Adjusted margin for smaller screens */
+  }
+
+  .second-section {
+      margin-left: 2%;
+      margin-right: 2%;
+  }
+}
+@media (max-width: 600px) {
+  .third-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem; /* Adjusted margin for smaller screens */
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+
+  }
+}
+
+.third-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem; /* Adjusted margin for smaller screens */
+}
+
+.box {
+  display: flex;
+  flex-direction: row;
+  border: #065D90 3px solid;
+  padding: 1rem; /* Adjusted padding for smaller screens */
+  margin: 1rem;
+  font-size: 0.875rem; /* Responsive font size */
+  height: 18vh;
+  width: 25vh;
+  border-radius: 10px;
+  color: #065D90;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.charges-statement {
+  font-size: 0.75rem; /* Responsive font size */
+}
+
+.price-amount {
+  font-size: 1.5rem; /* Responsive font size */
+  margin-top: 1.5rem;
+}
+
+.price-section {
+  position: relative;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #065D90;
+}
+
+.traveler-form {
+  background-color: #B2DDF6;
+  height: auto;
+  width: 40%; /* Adjusted width for smaller screens */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem; /* Adjusted margin for smaller screens */
+}
+
+input {
+  border-radius: 8px;
+  border: #065D90;
+  width: 80px;
+  height: 30px;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-btn {
+  padding: 1rem; /* Adjusted padding for smaller screens */
+  height: auto; /* Adjusted height for smaller screens */
+  width: 40%; /* Adjusted width for smaller screens */
+  margin-top: 1.5rem;
+  margin-right: auto;
+  background-color: #065D90;
+  color: white;
+  border: #065D90;
+  border-radius: 10px;
+  font-size: 1rem; /* Responsive font size */
+  align-items: center;
+  margin-bottom: 2rem; /* Adjusted margin for smaller screens */
+  align-items: center;
+}
+
+.icon {
+  font-size: 1.5rem; /* Responsive font size */
+  margin-bottom: 0.2cm;
+}
+
+.overall {
+  font-size: 1.5rem; /* Responsive font size */
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background-color: #B2DDF6;
+  border: #B2DDF6;
 }
