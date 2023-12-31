@@ -145,15 +145,18 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
     return(
         <div>
             {/* JSX for the booking form */}
+            <div  className='traveler-form'>
             <label htmlFor="travelers">Number of Travelers:</label>
-            <input
+            <input 
                 type="number"
                 id="travelers"
                 name="travelers"
                 value={numTravelers}
                 onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
                 />
+                 </div>
             <button className='book-btn' onClick={handleBookNow}>Book Now</button>
+       
         </div>
     )
  };
