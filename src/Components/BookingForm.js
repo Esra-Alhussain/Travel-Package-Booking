@@ -81,11 +81,16 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
                 // setAvailableTickets((prevTickets) => prevTickets + numTravelers);
                 handleUpdateTickets(numTravelers);
                 console.log('Booking successful');
-            }else{
-            // If the user cancels the confirmation, revert the available tickets.
-            setAvailableTickets((prevTickets) => prevTickets + numTravelers);
-            console.log("this is a setAvilableTickets", setAvailableTickets);
+            } else {
+                // If the user cancels the confirmation, revert the available tickets.
+                console.log("this is a setAvilableTickets", setAvailableTickets);
+                const cancelConfirmed = window.confirm('Are you sure you want to cancel this booking?');
+
+            if (cancelConfirmed) {
+                // Call the cancellation function
+                handleCancellation();
             }
+          }
         }
         catch(error){ //catch the error
          // Handle errors that might occur during the booking process
@@ -101,6 +106,36 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
 
     //this function ensures that the state is updated appropriately when the user changes the number of travelers in the input field, and it is a crucial part of keeping your component's state and the UI in sync
     //onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
+
+    const handleCancellation = async () => {
+        try {
+        const data ={
+            ...packageItem,
+            tickets: packageItem.tickets + numTravelers,
+        };
+
+        const response = await axios.put(
+            `https://656ac402dac3630cf7274730.mockapi.io/Travel/packages/${packageItem.id}`,
+        data,
+        {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        }
+        );
+        //check if the cancellation was successful 
+        if (response.status >= 200 && response.status < 300){
+           //update available tickets in the parent component 
+           handleUpdateTickets(-numTravelers); //the negative sign to increase the available tickets
+           console.log('Cancellation successful');
+        }else{
+            console.error('Error cancelling booking:', response.statusText);
+        }
+        } catch (error) {
+            console.error('Error cancelling booking:', error);
+        }
+      };
+
     return(
         <div>
             {/* JSX for the booking form */}
