@@ -35,7 +35,7 @@ img{
     flex-direction: column;
     /* width: 60%;
     height: auto; */
-    margin-left: 17%;
+    margin-left: 19%;
     padding: 2%;
     max-width: 60%; 
     max-height: 100%;
@@ -45,6 +45,13 @@ img{
     /* text-align: left; */
     border: 2px solid black;
     justify-content: space-between;
+    width: 900%;
+    height: 800%;
+}
+.flight-destination{
+  font-weight:bolder;
+  font-size: x-large;
+  margin-bottom: 40px;
 }
 .split-paragraph {
     display: flex;
@@ -80,16 +87,17 @@ img{
     align-items: center;
     /* border: black 2px solid; */
     justify-content: center ;
+    margin-bottom: 44px;
 }
 .box{
     display: inline-block;
-    border: #065D90 2px solid;
+    border: #065D90 3px solid;
     padding-top: 37px;
     margin: 27px;
-    padding: 4px;
+    margin-top: 44px;
     font-size: small;
-    height: 70px;
-    width: 88px;
+    height: 18vh;
+    width:25vh;
     border-radius:10px;
     color: #065D90;
     align-items: center;
@@ -101,9 +109,8 @@ img{
     font-size: smaller;
 }
 .price-amount{
-    font-size: large;
-    margin-top:19px;
-    
+    font-size: x-large;
+    margin-top:44px;
 }
  /* Style for the container with line */
 .price-section{
@@ -123,17 +130,53 @@ img{
     background-color: #065D90; 
     
   }
+  .traveler-form{
+    background-color: #B2DDF6;
+    height: 50px;
+    width: 290px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    /* margin-left: 26%; */
+    margin-top: 50px;
+  }
+  input{
+    border-radius: 8px;
+    border: #065D90;
+    width: 80px;
+    height: 30px;
+    margin: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
   .book-btn{
     padding:10px;
-    height: 86%;
-    width:25%;
+    height: 66%;
+    width:140px;
     margin-top: 30px;
+    margin-left: 430px;
     background-color: #065D90; 
     color: white;
     border: #065D90;
     border-radius:10px;
     font-size: large;
+    align-items: center;
+    margin-bottom: 200px;;
+  }
+
+  .icon{
+    font-size: large;
+    margin-bottom: 0.2cm;
   }
 /* .review-section{
 
 } */
+.overall{
+    font-size:19pt;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #B2DDF6;
+    border: #B2DDF6;
+}
