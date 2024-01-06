@@ -147,7 +147,7 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
             {/* JSX for the booking form */}
             <div  className='traveler-input'>
             <label htmlFor="travelers">Number of Travelers:</label>
-            <input 
+            <input className='input'
                 type="number"
                 id="travelers"
                 name="travelers"

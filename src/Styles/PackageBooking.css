@@ -336,7 +336,7 @@ img {
   margin-top: 2rem; /* Adjusted margin for smaller screens */
 }
 
-input {
+.input {
   border-radius: 8px;
   border: #065D90;
   width: 80px;
