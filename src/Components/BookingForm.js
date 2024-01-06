@@ -143,9 +143,9 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
     };
 
     return(
-        <div>
+        <div className='traveler-form'>
             {/* JSX for the booking form */}
-            <div  className='traveler-form'>
+            <div  className='traveler-input'>
             <label htmlFor="travelers">Number of Travelers:</label>
             <input 
                 type="number"

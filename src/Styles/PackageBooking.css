@@ -242,30 +242,35 @@ img {
   text-align: right;
 }
 
-@media (max-width: 800px) {
+/* @media (max-width: 800px) {
   .statement-container {
       flex-basis: calc(100% - 10px);
       margin-left: 0; /* Adjusted margin for smaller screens */
-  }
+  /* }
 
   .second-section {
       margin-left: 2%;
       margin-right: 2%;
-  }
-}
+  } */ 
+
 @media (max-width: 600px) {
-  .third-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem; /* Adjusted margin for smaller screens */
-  }
   .box {
     display: flex;
     flex-direction: column;
-
   }
+  .traveler-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+   }
+    .book-btn {
+      width: 80%;
+      margin: 1.5rem auto;
+   }
+   .third-section {
+    display: flex;
+    flex-direction: column;
+   }
 }
 
 .third-section {
@@ -317,10 +322,13 @@ img {
   height: 2px;
   background-color: #065D90;
 }
-
-.traveler-form {
+.traveler-form{
+  display: flex;
+  flex-direction: row;
+}
+.traveler-input {
   background-color: #B2DDF6;
-  height: auto;
+  height: 50px;
   width: 40%; /* Adjusted width for smaller screens */
   text-align: center;
   align-items: center;
@@ -340,18 +348,15 @@ input {
 }
 
 .book-btn {
-  padding: 1rem; /* Adjusted padding for smaller screens */
-  height: auto; /* Adjusted height for smaller screens */
-  width: 40%; /* Adjusted width for smaller screens */
-  margin-top: 1.5rem;
-  margin-right: auto;
+  padding: 1rem;
+  height: auto;
+  width: 40%;
+  margin: 1.5rem 0 1.5rem auto; /* Adjusted margin for right alignment */
   background-color: #065D90;
   color: white;
   border: #065D90;
   border-radius: 10px;
-  font-size: 1rem; /* Responsive font size */
-  align-items: center;
-  margin-bottom: 2rem; /* Adjusted margin for smaller screens */
+  font-size: 1.2rem;
   align-items: center;
 }
 
