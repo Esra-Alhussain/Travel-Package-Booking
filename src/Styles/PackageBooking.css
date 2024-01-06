@@ -383,8 +383,8 @@ img {
    }
    .traveler-form {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    flex-direction: row-reverse;
   }
 }
