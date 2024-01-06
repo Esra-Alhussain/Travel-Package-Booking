@@ -30,14 +30,17 @@ Welcome to our Travel Package Booking Platform, a React-based application for cr
 - **Yi Han:**
   - Responsible for package browsing.
   - Contributed to styling the home page along with Ghofran.
+  - GitHub: [Yi Han's GitHub](https://github.com/yhan4)
 
 - **Ghofran:**
   - Contributed to styling the home page.
   - Responsible for package creation on the home page.
+  - GitHub: [Ghofran's GitHub](https://github.com/ghufran-adel)
 
 - **Esra Alhussain:**
   - Responsible for package booking.
   - Designed the website using Figma.
+  - GitHub: [Esra's GitHub](https://github.com/Esra-Alhussain)
 
 ## Getting Started
 
