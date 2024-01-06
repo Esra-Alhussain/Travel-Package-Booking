@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Travel-Package-Booking/static/css/main.00584d8d.css",
+    "main.js": "/Travel-Package-Booking/static/js/main.8e2715b2.js",
+    "static/media/herosection.png": "/Travel-Package-Booking/static/media/herosection.ee1dee9877e625df9ba5.png",
+    "index.html": "/Travel-Package-Booking/index.html",
+    "main.00584d8d.css.map": "/Travel-Package-Booking/static/css/main.00584d8d.css.map",
+    "main.8e2715b2.js.map": "/Travel-Package-Booking/static/js/main.8e2715b2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.00584d8d.css",
+    "static/js/main.8e2715b2.js"
+  ]
+}
