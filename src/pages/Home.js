@@ -9,9 +9,9 @@ function Home() {
         {/* <Navbar/> */}
         <HeroSection/>
         <TravelPackageCreation/>
-        <Routes>
+        {/* <Routes>
         <Route path="/TravelPackageCreation" element={<TravelPackageCreation />} />
-      </Routes>
+      </Routes> */}
 
     </div>
   )
