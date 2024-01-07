@@ -42,6 +42,37 @@ Welcome to our Travel Package Booking Platform, a React-based application for cr
   - Contributed to styling the home page.
   - Designed the website using Figma. (Figma Link https://www.figma.com/file/Qt0EC1teQovhZ0iaPFCNla/Travel-package-system?type=design&mode=design&t=G1KBHz2KFN87R9aL-0 )
   - GitHub: [Esra's GitHub](https://github.com/Esra-Alhussain)
+    
+## Project Details
+
+- **Domain:**
+  - [https://Esra-Alhussain.github.io/Travel-Package-Booking)
+
+- **React Component Hierarchy Trees:**
+
+  1. **Travel Package Creation:**
+     - App 
+      - Home
+       -Travel Package creation
+
+  2. **Package Browsing:**
+     - App
+      - AllPackages
+       - Filter
+       - PackageBrowsing
+
+  3. **Package Booking:**
+     - App 
+      - OnePackage
+        - PackageDetail
+          - BookingForm
+
+   4. **Home Page:**
+      - App 
+      - Home
+        - HerSection
+        - NavBar
+        - Footer
 
 ## Getting Started
 
