@@ -67,10 +67,6 @@ function OnePackage({packages }) {
          {/* Render PackageDetail and pass the data as props */}
          {/* pass the necessary props as attributes to the packageDetail component */}
          {/* Receive Props in Child Component */}
-         
-         {/* Render BookingForm and pass the data as props */}
-        {/* <BookingForm packageItem={selectedPackage}
-        /> */}
        </>
       ) : (
         <p> Loading...</p>
