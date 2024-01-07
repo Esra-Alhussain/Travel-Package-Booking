@@ -12,7 +12,6 @@ function Home() {
         {/* <Routes>
         <Route path="/TravelPackageCreation" element={<TravelPackageCreation />} />
       </Routes> */}
-
     </div>
   )
 }
