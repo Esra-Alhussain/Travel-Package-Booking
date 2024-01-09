@@ -3,7 +3,7 @@ import "../Styles/Herosection.css";
 
 export default function HeroSection() {
   return (
-    <div class='Herosection'>
+    <div className='Herosection'>
       <h1>
       Start your unforgettable 
       <br/>
