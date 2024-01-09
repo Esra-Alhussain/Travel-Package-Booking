@@ -6,10 +6,11 @@
     text-decoration: none;
   }
 
-h2,
+.package-available,
 .package-null {
     margin-top: 20px;
     margin-left: 30px;
+    color: #065d90;
 }
 
 .package-grid {
@@ -44,7 +45,8 @@ h2,
     justify-content: space-between;
     gap: 1rem;
     margin-bottom: 0.5rem;
-    color: black;
+    /* color: black; */
+    color: #065d90;
 }
 
 .package-details-header h4 {
@@ -58,14 +60,16 @@ h2,
 
 .package-details {
     margin-top: 5px;
-    color: grey;
+    /* color: grey; */
+    color: #215b7d7f;
 }
 
 .package-price {
     margin-top: 10px;
     font-size: 18px;
     font-weight: 600;
-    color: black;
+    /* color: black; */
+    color: #065d90;
 }
 
 @media (width < 900px) {
