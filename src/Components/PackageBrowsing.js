@@ -28,7 +28,7 @@ function PackageBrowsing({ packages,filter }) {
 
   return (
     <div>
-      <h2>Available Travel Packages</h2>
+      <h2 className='package-available'>Available Travel Packages</h2>
       <div className='package-grid'>
       {filteredPackages.length === 0 ? (
         <p className='package-null'>Based on your filters, nothing is available.</p> 
