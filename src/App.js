@@ -1,14 +1,12 @@
 import './App.css';
 import { useState, useEffect  } from 'react';
-// import TravelPackageCreation from './Components/TravelPackageCreation';
-// import PackageBrowsing from './Components/PackageBrowsing';
-// import HeroSection from './Components/HeroSection';
+import TravelPackageCreation from './Components/TravelPackageCreation';
 import Navbar from './Components/Navbar';
 import { Route, Routes } from "react-router-dom";
 import Home from './pages/Home.js';
 import AllPackages from './pages/AllPackages.js';
 import OnePackage from './pages/OnePackage.js';
-// import OnePackage from './pages/OnePackage.js';
+
 
 function App() {
    // a state variable to store the selected package ID
@@ -28,25 +26,9 @@ function App() {
       <Route path="*" element={<Home/>}/> {/*this route should match any descendant route, allowing nested routes to render properly. */}
       <Route path="/AllPackages" element={<AllPackages packages={Packages} />} />
       <Route path="/OnePackage/:id" element={<OnePackage packages={Packages}/>} />
-      {/* <Route path="/AllPackages" element={<AllPackages packages={Packages}/>}/> */}
-      {/* <Route path="/AllPackages/:id" element={<OnePackage />} /> */}
-      {/* <Route path="/contact" component={Contact} />
-      <Route path="/about" component={About} /> */}
-
-
+      <Route path="/TravelPackageCreation" element={<TravelPackageCreation />} />
       </Routes>
       
-     
-
-    {/* <TravelPackageCreation setPackages={setPackages} Packages={Packages}/> */}
-    {/* hello please write your compenent here to test how it looks then 
-    delete it when you sure that it is working.. we will put there the nav bar 
-    and the routes for the pages.. */}
-
-      {/* <AllPackages packages={Packages} /> */}
-      
-
-
     </div>
   );
 

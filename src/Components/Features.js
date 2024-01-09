@@ -1,5 +1,8 @@
 import React from "react";
 import "../Styles/Herosection.css";
+// import ".TravelPackageCreation";
+import { Link } from "react-router-dom";
+import "../pages/AllPackages"
 
 function Features(){
 
@@ -9,18 +12,20 @@ function Features(){
                <p className="feature-title"> Package Creation </p>
                <img className="feature-img"src=""/>
                <p className="feature-description"> This is the description section</p>
+               <Link to="../AllPackages">
                <button className="feature-button">
-                click Here 
+                All packages
                </button>
+               </Link>
             </div>
 
             <div className="package-browsing">
                <p className="feature-title">Package Browsing</p>
                <img className="feature-img"src=""/>
                <p className="feature-description"> This is the description section</p>
-               <button className="feature-button">
-                click Here 
-               </button>
+               <Link to="./TravelPackageCreation">
+   <button className="feature-button">Create a package</button>
+</Link>
             </div>
         </div>
     )
