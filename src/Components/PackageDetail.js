@@ -21,7 +21,7 @@ function PackageDetail({packageItem}){
   return(
      <>
         <div className='first-section'>
-           <img src={packageItem.pic} alt="Package" />
+           <img className="package-img" src={packageItem.pic} alt="Package" />
            <h2>Destination:{packageItem.itinerary.destination}</h2>
         </div>
         <div className='second-section'>
