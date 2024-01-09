@@ -98,16 +98,7 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
          console.error('Error booking travel packagr:',error);
         }
     }
-
-      // This function will be called when the user changes the value in the number input.
-    // const handleNumTravelersChange = (e) => {
-    //     setAvailableTickets(parseInt(e.target.value, 10));
-    //     };
-        
-
-    //this function ensures that the state is updated appropriately when the user changes the number of travelers in the input field, and it is a crucial part of keeping your component's state and the UI in sync
-    //onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
-
+    
     const handleCancellation = async () => {
         const cancelConfirmed = window.alert('Are you sure you want to cancel this booking?');
 
@@ -152,6 +143,7 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
                 id="travelers"
                 name="travelers"
                 value={numTravelers}
+                //this function ensures that the state is updated appropriately when the user changes the number of travelers in the input field, and it is a crucial part of keeping your component's state and the UI in sync
                 onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
                 />
                  </div>
