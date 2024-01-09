@@ -1,5 +1,5 @@
 import React from "react";
-import "../Styles/Herosection.css";
+import "../Styles/Features.css";
 
 function Features(){
 
@@ -7,7 +7,7 @@ function Features(){
         <div className="features">
             <div className="package-creation">
                <p className="feature-title"> Package Creation </p>
-               <img className="feature-img"src=""/>
+               <img className="feature-img" src="./src/Images/creation.jpg" alt="Feature" />
                <p className="feature-description"> This is the description section</p>
                <button className="feature-button">
                 click Here 
@@ -16,7 +16,7 @@ function Features(){
 
             <div className="package-browsing">
                <p className="feature-title">Package Browsing</p>
-               <img className="feature-img"src=""/>
+               <img className="feature-img" src="./src/Images/browsing.jpg" alt="Feature" />
                <p className="feature-description"> This is the description section</p>
                <button className="feature-button">
                 click Here 

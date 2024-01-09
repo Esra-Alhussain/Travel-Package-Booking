@@ -1,0 +1,19 @@
+.features{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.package-creation{
+    border: solid 2px #065D90;
+    background-color: white;
+    margin: 30px;
+}
+
+.package-browsing{
+    border: solid 2px #065D90;
+    background-color: white;
+}
+
+/* feature-img{
+} */
