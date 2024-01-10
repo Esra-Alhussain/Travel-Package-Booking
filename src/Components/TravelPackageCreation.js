@@ -2,8 +2,8 @@ import React from "react";
 import { useState } from "react";
 import "../Styles/TravelPackageCreation.css";
 
-function TravelPackageCreation({ Packages, setPackages }) {
 
+function TravelPackageCreation({ Packages, setPackages }) {
   // how  the data should look like when posting 
   const initialPackageState = {
     itinerary: {
@@ -77,6 +77,9 @@ function TravelPackageCreation({ Packages, setPackages }) {
       // Reset the form fields to the initial state
       setCreatePackages(initialPackageState);
 
+    //  show the user that the package has been created 
+      alert("the package has been created succesfully");
+      
       // Log the entire response to the console
       console.log("Server response:", data);
     } catch (error) {
@@ -88,7 +91,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
   return (
     <div class="container">
       <h1>
-        <span>Create Your</span>Traveler’s Experiences
+        <span>Create Your</span> Traveler’s Experiences
       </h1>
       <div className="form">
         <form onSubmit={handleAddPackage}>

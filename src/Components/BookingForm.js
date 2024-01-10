@@ -125,7 +125,7 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
                 //this function ensures that the state is updated appropriately when the user changes the number of travelers in the input field, and it is a crucial part of keeping your component's state and the UI in sync
                 onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
                 />
-                 </div>
+            </div>
             <button className='book-btn' onClick={handleBookNow} disabled={!availableTickets}>Book Now</button>
       </div>
       {!availableTickets && <p className='No-tickets'>No tickets available for booking</p>}
