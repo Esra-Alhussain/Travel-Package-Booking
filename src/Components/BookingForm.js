@@ -134,6 +134,7 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
     };
 
     return(
+        <>
         <div className='traveler-form'>
             {/* JSX for the booking form */}
             <div  className='traveler-input'>
@@ -147,9 +148,10 @@ const BookingForm = ({ packageItem, availableTickets,setAvailableTickets, handle
                 onChange={(e) => setNumTravelers(parseInt(e.target.value, 10))}
                 />
                  </div>
-            <button className='book-btn' onClick={handleBookNow}>Book Now</button>
-       
-        </div>
+            <button className='book-btn' onClick={handleBookNow} disabled={!availableTickets}>Book Now</button>
+      </div>
+      {!availableTickets && <p className='No-tickets'>No tickets available for booking</p>}
+      </>
     )
  };
  export default BookingForm;
