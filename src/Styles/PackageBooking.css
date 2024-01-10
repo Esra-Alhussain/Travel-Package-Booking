@@ -8,6 +8,7 @@ body {
 .first-section {
   display: flex;
   flex-direction: column;
+  margin: 2%;
   margin-top:3%;
   margin-bottom: 2%;
   padding: 5%;
@@ -19,6 +20,7 @@ body {
 }
 
 .package-img {
+  width: 70%;
   max-width: 55%;
   height: auto;
   object-fit: cover;
@@ -104,6 +106,10 @@ body {
 
 }
 
+.box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transform: scale(1.1); 
+}
 .charges-statement {
   font-size: 0.75rem; /* Responsive font size */
 }
@@ -127,8 +133,9 @@ body {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #065D90;
+  background-color: #0689c5;
 }
+
 .traveler-form{
   display: flex;
   flex-direction: row;
@@ -176,12 +183,16 @@ body {
 }
 
 .book-btn:hover {
-  background-color: #0689c5; /* Darker blue on hover */
+  background-color: #0689c5;
 }
-
 .icon {
   font-size: 1.5rem; 
   margin-bottom: 0.2cm;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: rotate(360deg); /* Rotate the icon on hover */
 }
 
 .overall {
@@ -194,7 +205,8 @@ body {
   color: white;
 }
 .overall:hover {
-  background-color: #0689c5; /* Darker blue on hover */
+  background-color: #0689c5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 600px) {
   .box {
