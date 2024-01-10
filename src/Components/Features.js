@@ -3,15 +3,12 @@ import "../Styles/Features.css";
 import creation from "../Images/creation.jpg";
 import browsing from "../Images/browsing.jpg";
 import { Link } from "react-router-dom";
-<<<<<<< HEAD
-=======
 
->>>>>>> 379046766970a992ddb9ee4186d21c71be6bee5a
 
 function Features(){
 
     return(
-        <div className="features">
+     <div className="features">
       <div className="package-creation">
         <div className="feature-content">
           <img className="feature-img" src={creation} alt="Feature" />
