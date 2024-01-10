@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Features(){
 
     return(
-        <div className="features">
+     <div className="features">
       <div className="package-creation">
         <div className="feature-content">
           <img className="feature-img" src={creation} alt="Feature" />

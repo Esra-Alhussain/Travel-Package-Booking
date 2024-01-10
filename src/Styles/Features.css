@@ -38,7 +38,8 @@
   .feature-img {
     margin-right: 20px;
     width: 350px;
-    height: 350px;
+    height: 130%;
+    border-radius: 8px;
   }
   
   .feature-button {
@@ -58,3 +59,16 @@
     background-color: #0689c5;
   }
   
+  @media screen and (max-width: 800px){
+   
+    .feature-content{
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+    .feature-img {
+      margin-right: 0px;
+      padding-bottom: 14px;
+      border-radius: 8px;
+    }
+  }
