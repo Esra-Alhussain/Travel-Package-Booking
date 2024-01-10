@@ -3,7 +3,7 @@ import "../Styles/Features.css";
 import creation from "../Images/creation.jpg";
 import browsing from "../Images/browsing.jpg";
 import { Link } from "react-router-dom";
-import TravelPackageCreation from "./TravelPackageCreation";
+
 
 function Features(){
 

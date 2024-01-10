@@ -17,7 +17,6 @@ function App() {
       .then((data) => setPackages(data));
   }, []);
   
-  console.log("Current Packages:", Packages);
 
   return (
     <div>
@@ -26,7 +25,7 @@ function App() {
       <Route path="*" element={<Home/>}/> {/*this route should match any descendant route, allowing nested routes to render properly. */}
       <Route path="/AllPackages" element={<AllPackages packages={Packages} />} />
       <Route path="/OnePackage/:id" element={<OnePackage packages={Packages}/>} />
-      <Route path="/TravelPackageCreation" element={<TravelPackageCreation />} />
+      <Route path="/TravelPackageCreation" element={<TravelPackageCreation setPackages={setPackages} Packages={Packages} />} />
       </Routes>
       
     </div>
