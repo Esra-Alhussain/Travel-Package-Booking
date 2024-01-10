@@ -46,6 +46,14 @@ function PackageDetail({packageItem}){
            <p>Near Park</p>
           </div>
         </div>
+
+        <div className='chesckIn-tips'>
+           <p><b>Package Description </b></p>
+           <ul>
+           {packageItem.itinerary.description}
+           </ul>
+        </div>
+
         <div className='chesckIn-tips'>
            <p><b>Check-in tips</b></p>
            <ul>
