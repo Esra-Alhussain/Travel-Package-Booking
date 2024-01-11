@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/Travel-Package-Booking/static/css/main.1c0e1358.css",
+    "main.css": "/Travel-Package-Booking/static/css/main.102ef618.css",
     "main.js": "/Travel-Package-Booking/static/js/main.16127edf.js",
     "static/media/herosection.png": "/Travel-Package-Booking/static/media/herosection.ee1dee9877e625df9ba5.png",
     "static/media/browsing.jpg": "/Travel-Package-Booking/static/media/browsing.249d9feb9ebc604fa80f.jpg",
     "static/media/creation.jpg": "/Travel-Package-Booking/static/media/creation.d86ec16569d23ecec25a.jpg",
     "index.html": "/Travel-Package-Booking/index.html",
-    "main.1c0e1358.css.map": "/Travel-Package-Booking/static/css/main.1c0e1358.css.map",
+    "main.102ef618.css.map": "/Travel-Package-Booking/static/css/main.102ef618.css.map",
     "main.16127edf.js.map": "/Travel-Package-Booking/static/js/main.16127edf.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c0e1358.css",
+    "static/css/main.102ef618.css",
     "static/js/main.16127edf.js"
   ]
 }
