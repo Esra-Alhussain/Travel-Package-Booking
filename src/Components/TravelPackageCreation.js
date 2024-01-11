@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "../Styles/TravelPackageCreation.css";
+import creation from "../Images/creation.jpg";
 
 
 function TravelPackageCreation({ Packages, setPackages }) {
