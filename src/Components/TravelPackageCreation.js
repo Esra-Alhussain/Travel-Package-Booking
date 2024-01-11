@@ -89,6 +89,7 @@ function TravelPackageCreation({ Packages, setPackages }) {
   };
 
   return (
+    <>
     <div class="container">
       <h1>
         <span>Create Your</span> Traveler’s Experiences
@@ -195,7 +196,20 @@ function TravelPackageCreation({ Packages, setPackages }) {
           <button type="submit">Add Package</button>
         </form>
       </div>
+      <ul className="bg-bubbles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
     </div>
+    </>
   );
 }
 
