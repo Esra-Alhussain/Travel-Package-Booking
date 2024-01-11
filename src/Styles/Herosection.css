@@ -33,3 +33,22 @@
       font-size:20px ;
     }
   }
+  .line {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/*Animation*/
+
+.anim-typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both
+}
+
+@keyframes typewriter {
+    from {
+          width: 0;
+    }
+    to {
+          width: 20em;
+    }
+}
