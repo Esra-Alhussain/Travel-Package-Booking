@@ -50,7 +50,7 @@ function PackageDetail({packageItem}){
         <div className='chesckIn-tips'>
            <p><b>Package Description </b></p>
            <ul>
-           {packageItem.itinerary.description}
+           {packageItem.description}
            </ul>
         </div>
 
